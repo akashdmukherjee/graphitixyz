@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ChartConfiguration" xmlns:tns="http://www.example.org/ChartConfiguration" elementFormDefault="qualified">
+    <element name="ChartConfigurations">
+    <complexType>
+      <sequence>
+        <element type="string" name="query" maxOccurs="1" minOccurs="0"/>
+        <element type="int" name="from"  maxOccurs="1" minOccurs="0"/>
+        <element type="int" name="to" maxOccurs="1" minOccurs="0"/>
+        <element type="string" name="connectionId"  maxOccurs="1" minOccurs="0"/>
+        <element type="string" name="typeOfChart" maxOccurs="1" minOccurs="0"/>
+        <element type="string" name="isPagination" maxOccurs="1" minOccurs="0"/>
+        <element name="xaxisVencoding" maxOccurs="1" minOccurs="0">
+          <complexType>
+            <sequence>
+              <element name="dimensions" type="string" maxOccurs="unbounded" minOccurs="0">
+              </element>
+              <element name="metrics" type="string" maxOccurs="unbounded" minOccurs="0">
+              </element>
+            </sequence>
+          </complexType>
+        </element>
+        <element name="yaxisVencoding" maxOccurs="1" minOccurs="0">
+          <complexType>
+            <sequence>
+              <element name="dimensions" type="string" maxOccurs="unbounded" minOccurs="0">
+              </element>
+              <element name="metrics" type="string" maxOccurs="unbounded" minOccurs="0">
+              </element>
+            </sequence>
+          </complexType>
+        </element>
+        <element name="colorEncoding" maxOccurs="1" minOccurs="0">
+          <complexType>
+            <sequence>
+              <element name="dimensions" type="string" maxOccurs="unbounded" minOccurs="0">
+              </element>
+              <element name="metrics" type="string" maxOccurs="unbounded" minOccurs="0">
+              </element>
+            </sequence>
+          </complexType>
+        </element>
+        <element name="detailEncoding" maxOccurs="1" minOccurs="0">
+          <complexType>
+            <sequence>
+              <element name="dimensions" type="string" maxOccurs="unbounded" minOccurs="0">
+              </element>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+</schema>

@@ -1,0 +1,8 @@
+<html>  
+	<body>  
+	  <h3>Hi ${member.fullName}, we are testing registration confirmation :)!</h3>  
+	  <div>  
+	  	Your link for verification is <a href="${member.verificationURL}">${member.verificationURL}</a>
+	  </div>  
+	</body>  
+</html>  

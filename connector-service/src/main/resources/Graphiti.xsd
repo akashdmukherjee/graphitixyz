@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Graphiti" xmlns:tns="http://www.example.org/Graphiti" elementFormDefault="qualified">
+
+    <element name="Connection" type="tns:Connection"></element>
+    
+    <complexType name="Connection">
+    	<sequence>
+    		<element name="user_id" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="connection_id" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="connection_name" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="databaseType" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="server_url" type="string"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="port" type="int" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="username" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="password" type="string" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    		<element name="databaseName" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="isValid" type="boolean" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="isSSLEnabled" type="boolean" maxOccurs="1"
+    			minOccurs="1">
+    		</element>
+    	</sequence>
+    </complexType>
+</schema>
