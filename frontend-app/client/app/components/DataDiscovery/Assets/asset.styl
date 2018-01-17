@@ -1,0 +1,217 @@
+@import './index.styl'
+
+.asset
+  border-bottom 1px solid border-color
+  cursor pointer
+  user-select none
+  list-style none
+  > div
+    text-decoration none
+    display flex
+    flex 1
+    padding rem-calc(20)
+  &:hover
+    background-color bg-color
+    .asset-btns
+      transition all 0.25s ease-in-out
+      opacity 1
+  .icon
+    width rem-calc(80)
+    height rem-calc(80)
+    margin-right rem-calc(20)
+    background-color #f2f2f2
+    display flex
+    align-items center
+    justify-content center
+    opacity 0.6
+    border-radius rem-calc(3)
+
+  .asset-details
+    display flex
+    flex-flow column
+    flex 1
+    .asset-name
+      font-weight 300
+      font-size rem-calc(18)
+      letter-spacing 0.3px
+      color #000
+    .asset-description
+      color #999
+      font-weight 400
+      font-size rem-calc(13)
+      margin rem-calc(5) 0
+    .asset-footer
+      display flex
+      flex-flow row
+      justify-content space-between
+      height rem-calc(30)
+      z-index 1
+
+.tags
+  display flex
+  flex .7
+  overflow-x scroll
+  overflow-y hidden
+  white-space nowrap
+  .tag
+    margin 0 rem-calc(5)
+  .tag:first-child
+    margin-left 0  
+
+.tags-list
+  display none
+  list-style none
+  position absolute
+  z-index 999
+  left 70%
+  top 100%
+  background-color #fff
+
+.asset-infos
+  margin 0
+  display flex
+  .asset-btns
+    margin 0
+    opacity 0
+    transition all 0.25s ease-in-out
+  .asset-endorsements
+    margin 0
+    margin-left rem-calc(10)
+    display flex
+    align-items center
+    .endorsement
+      margin 0
+      display flex
+      margin-right rem-calc(10)
+      align-items center
+      &:last-child
+        margin-right 0
+    img
+      width rem-calc(16)
+      height rem-calc(16)
+
+.count
+  font-size rem-calc(14)
+  color #868686
+  margin-left rem-calc(2)
+
+.count-trust-active
+  @extend .count
+  color #39A995
+
+.count-error-active
+  @extend .count
+  color #FF8A1E
+
+.count-deprecate-active
+  @extend .count
+  color #f06f6a
+
+@keyframes asset-icon-animation {
+  from {
+    opacity 1
+    // width 80px
+    // height 80px
+  }
+
+  to {
+    opacity 0
+    // width 0
+    // height 0
+  }
+}
+
+.asset-icon
+  width rem-calc(16)
+  height rem-calc(16)
+  background-size contain
+  // animation-duration 2.3s
+  // animation-name asset-icon-animation
+  // animation-iteration-count infinite
+  // animation-direction alternate
+  // animation-timing-function ease-in-out
+.asset-icon-dataset
+  @extend .asset-icon
+  background-image url('../../../images/asset_dataset.png')
+.asset-icon-sql
+  @extend .asset-icon
+  background-image url('../../../images/asset_code.png')
+.asset-icon-chart
+  @extend .asset-icon
+  background-image url('../../../images/asset_chart.png')
+
+
+share-dialog-width=400
+.share-wrapper
+  z-index 1
+  display inline
+  position relative
+  .share-dialog
+    display flex
+    flex-flow column
+    position absolute
+    width rem-calc(share-dialog-width)
+    background-color #fff
+    padding rem-calc(10)
+    top rem-calc(37)
+    right rem-calc(10)
+    border 1px solid #e8e8e8
+    border-radius rem-calc(3)
+    transition all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s
+    &:after,
+      &:before
+        bottom 100%
+        border solid transparent
+        content ' '
+        height 0
+        pointer-events none
+        position absolute
+        width 0
+    &:before
+      border-bottom-color #e8e8e8
+      margin-left -11px
+      border-width 11px
+      right 0
+    &:after
+      border-bottom-color #fff
+      border-width 10px
+      margin-left -10px
+      right 0.04rem
+
+    .invite
+      display flex
+      padding rem-calc(5) 0
+      cursor pointer
+      &:hover
+        >h5
+          color #f26450
+      h5
+        font-size rem-calc(14)
+        font-weight 400
+        color #444
+    div h5
+      font-size rem-calc(12)
+      font-weight 300
+      color #555
+      margin-top rem-calc(5)
+    .inputs-wrapper
+      display flex
+      flex-flow row
+      padding-top rem-calc(5)
+      >input
+        outline none
+        width 100%
+        padding rem-calc(5)
+        border-radius rem-calc(3)
+        box-shadow none
+        border 1px solid rgba(0,0,0,0.15)
+        border-right none
+        border-top-right-radius 0
+        border-bottom-right-radius 0
+        transition border .25s linear,color .25s linear,background-color .25s linear
+        font-size rem-calc(12)
+        color text-normal-light-color
+        font-weight 400
+
+.share-dialog-hide
+  display none

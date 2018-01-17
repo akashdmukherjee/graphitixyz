@@ -1,0 +1,30 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../../../styles/settings.styl'
+
+.text
+  width rem-calc(120)
+  color #5d5d5d
+  background-color rgba(0, 0, 0, .05)
+  border-radius rem-calc(3)
+  padding rem-calc(5)
+  margin rem-calc(5) rem-calc(10)
+  border none
+  font-size rem-calc(11)
+  font-weight 500
+  cursor pointer
+  &:hover
+    background-color #3c3c3c
+    color #fff
+  &:first-child
+    margin-top 0
+  &:last-child
+    margin-bottom 0
+
+.text-active
+  @extend .text
+  background-color color-graphiti-red
+  color #fff
+  &:hover
+    background-color color-gpt-red-dark-1
+    color #fff

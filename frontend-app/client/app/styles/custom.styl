@@ -1,0 +1,122 @@
+
+@import './settings'
+
+.btn
+  display inline-block
+  padding 6px 12px
+  margin-bottom 0
+  font-size rem-calc(14)
+  font-weight 400
+  line-height 1.428
+  text-align center
+  white-space nowrap
+  vertical-align middle
+  cursor pointer
+  user-select none
+  background-image none
+  border none
+  border-radius rem-calc(3)
+  outline none
+  transition border 0.25s linear, color 0.25s linear, background-color 0.25s linear
+
+.btn-lg
+  padding 6px 19px
+  font-size 17px
+  line-height 1.471
+  width 100%
+
+.btn-gpt
+  @extend .btn, .btn-lg
+  color white
+  background-color color-graphiti-red
+  border-bottom rem-calc(2) solid color-gpt-red-dark-1
+  &:hover
+    background-color color-gpt-red-dark-1
+
+.btn-gpt-blue
+  @extend .btn, .btn-lg
+  color white
+  background-color color-gpt-blue
+  border-bottom rem-calc(2) solid color-gpt-blue-dark-1
+  &:hover
+    background-color color-gpt-blue-dark-1
+
+.input-field
+  border-color transparent
+  border 2px solid #bdc3c7
+  font-size 17px
+  text-indent 3px
+  color #34495e
+  font-size 15px
+  line-height 1.467
+  padding 8px 12px
+  height 42px
+  border-radius 2px
+  box-shadow none
+  transition border 0.25s linear, color 0.25s linear, background-color 0.25s linear
+  display block
+  width 100%
+  background-color #fff
+  background-image none
+  tap-highligh-color rgba(0, 0, 0, 0)
+  box-sizing border-box
+
+.inp-field-gpt
+  @extend .input-field
+  margin-top 5px
+  &:focus
+    border-color color-gpt-red-dark-1
+    outline 0
+    box-shadow none
+  
+.inp-field-gpt-blue
+  @extend .input-field
+  margin-top 5px
+  &:focus
+    border-color color-gpt-blue
+    outline 0
+    box-shadow none
+
+.h2
+  font-size 20px
+
+.error
+  color crimson
+
+.input-icon
+  position absolute
+  right 9px
+  top 42px
+  bottom 0
+
+.input-icon-correct
+  @extend .input-icon
+  color green
+
+.input-icon-error
+  @extend .input-icon
+  color crimson
+
+.triangle::after, .triangle::before {
+  bottom: 100%;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+}
+
+.triangle::before {
+  border-bottom-color: #e8e8e8;
+  margin-left: -11px;
+  border-width: 11px;
+  right: 0;
+}
+
+.triangle::after {
+  border-bottom-color: #fff;
+  border-width: 10px;
+  margin-left: -10px;
+  right: 0.09rem;
+}

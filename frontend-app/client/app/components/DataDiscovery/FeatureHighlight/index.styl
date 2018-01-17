@@ -1,0 +1,48 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/settings'
+
+.feature-highlight-wrapper
+  margin rem-calc(10) rem-calc(10)
+  width rem-calc(110)
+  height rem-calc(110)
+  border-radius rem-calc(4)
+  display flex
+  justify-content center
+  align-items center
+  align-self center
+  flex-direction column
+  cursor pointer
+  &:hover
+    background-color #eee
+    border 1px solid rgba(62, 62, 62, 0.33)
+  h5
+    margin-top rem-calc(5)
+    font-weight 600
+    color rgba(62, 62, 62, 0.98)
+    font-size rem-calc(14)
+    span
+      color rgba(80, 80, 80, 0.66)
+      font-weight 400
+
+.icon
+  width rem-calc(32)
+  height rem-calc(32)
+  background-repeat no-repeat
+  background-size contain
+
+.r-icon
+  @extend .icon
+  background-image url('../../../images/rscript.png')
+
+.sql-icon
+  @extend .icon
+  background-image url('../../../images/sqlscript.png')
+
+.dashboard-icon
+  @extend .icon
+  background-image url('../../../images/dashboard.png')
+
+.dataset-icon
+  @extend .icon
+  background-image url('../../../images/dataset.png')

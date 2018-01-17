@@ -1,0 +1,29 @@
+.Select-control {
+  border: none;
+}
+
+.Select-value {
+  background-color:  #F26450!important;;
+  border: 1px solid rgb(255, 255, 255)!important;
+  color: #FFF!important;
+}
+
+.Select-value-label {
+  color: #FFF!important;
+}
+
+.Select-value-icon {
+  border-right: 1px solid rgba(171, 166, 165, 0.38)!important;
+}
+
+.Select-option.is-focused {
+  background-color:rgba(224, 118, 103, 0.48);
+}
+
+.Select-menu-outer, .Select-menu-outer {
+  background-color: #f3f4f5!important;
+}
+
+.Select-menu, .Select-option, .Select-option.is-focused {
+  background-color: 0.25s, color 0.25s;
+}

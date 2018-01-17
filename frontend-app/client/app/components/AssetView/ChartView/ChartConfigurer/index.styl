@@ -1,0 +1,180 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+color-main-contrast-light = #F3B562
+color-graphiti-orange = #F3B562
+color-main-contrast-light2 = #F1797A
+color-graphiti-red = #F26450
+color-gpt-red-light-1 = #ff8371
+color-gpt-red-dark-1 = #da5a48
+color-gpt-blue = #0fa2e2
+color-gpt-blue-dark-1 = #0d91ca
+color-gpt-label-blue-dark = #5692ad
+color-gpt-darkgrey = #717171
+color-gpt-purple = #615dae
+
+input-bg-color=rgba(30, 30, 30, 0.02)
+
+.label-font
+  font-size rem-calc(12)
+  font-weight 400
+  color #999
+  text-transform uppercase
+
+.inp-placeholder
+  color #b3b3b3
+  font-size rem-calc(13)
+  font-weight 400
+
+.ChartConfigurer-wrapper
+  display flex
+  flex-flow column
+  height 100%
+  width 600px
+  height 300px
+  margin-left 30%
+
+.visual-configurer
+  height rem-calc(75)
+  position relative
+  padding-left rem-calc(10)
+
+.representation
+  outline none
+  flex 1
+  height 100%
+  .label
+    @extend .label-font
+    width 100%
+    padding-bottom rem-calc(8)
+
+.granular-input
+  width auto
+  height auto
+  display flex
+  margin-right rem-calc(10)
+  border 1px solid #e8e8e8
+  padding rem-calc(5)
+  border-radius rem-calc(3)
+  background-color input-bg-color
+  .input-wrapper
+    position relative
+    input
+      width auto
+      outline none
+      overflow hidden
+      border none
+      background-color transparent
+      &::placeholder
+        @extend .inp-placeholder
+
+.granular-tags
+  max-width 90%
+  white-space nowrap
+  overflow scroll
+
+.configurers
+  display flex
+  flex 1
+  margin-top rem-calc(10)
+
+
+.action-icon
+  width rem-calc(16)
+  height rem-calc(16)
+  background-size cover
+  margin-right rem-calc(10)
+  &.swap
+    background-image url('../../../../images/swap.png')
+  &.color
+    background-image url('../../../../images/color.png')
+  &.size
+    background-image url('../../../../images/size-2.png')
+    width rem-calc(13)
+    height rem-calc(13)
+
+.vertical-draggable
+  flex 1
+  display flex
+  flex-flow column
+  .label
+    display flex
+    justify-content space-between
+    align-items center
+    h5
+      @extend .label-font
+      text-align left
+      width auto
+      margin-left rem-calc(10)
+  .field-input
+    margin rem-calc(10)
+    margin-top rem-calc(5)
+    position relative
+    input
+      outline none
+      width 100%
+      border 1px solid #e8e8e8
+      padding rem-calc(8)
+      border-radius rem-calc(3)
+      background-color input-bg-color
+      &::placeholder
+        @extend .inp-placeholder
+        font-size rem-calc(12)
+  .plotted-tags
+    height 100%
+    flex 1
+    flex-basis 100%
+    overflow hidden
+    .plotted-tag
+      margin 0
+
+.image-btn
+  padding rem-calc(4)
+  border 1px solid #e8e8e8
+  margin-right rem-calc(5)
+  border-radius rem-calc(3)
+  cursor pointer
+  opacity 0.55
+  transition all 0.25s ease-in-out
+  &.active
+    opacity 1
+  &:hover
+    opacity 1
+  .image
+    width rem-calc(20)
+    height rem-calc(20)
+    background-size cover
+    &.length
+      background-image url('../../../../images/vencoding_length.png')
+    &.position
+      background-image url('../../../../images/vencoding_position.png')
+    &.active
+      &.length
+        background-image url('../../../../images/vencoding_length-red.png')
+      &.position
+        background-image url('../../../../images/vencoding_position-red.png')
+  
+.action-btns
+  display flex
+  justify-content space-between
+  align-items center
+  .visual
+    display flex
+
+  .swap-btn
+    outline none
+    border 1px solid #e7e6e5
+    color #333
+    background-color #fff
+    border-radius rem-calc(3)
+    transition all 0.25s ease-in-out
+    padding 0 rem-calc(8)
+    cursor pointer
+    display flex
+    align-items center
+    height rem-calc(30)
+    i
+      margin-left rem-calc(8)
+      color rgba(58,56,52,.6)
+    &:hover
+      background-color rgba(58,56,52,.08)

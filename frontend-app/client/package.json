@@ -1,0 +1,136 @@
+{
+  "name": "storyboard-tool",
+  "version": "1.0.0",
+  "description": "",
+  "options": {
+    "mocha": "--require mocha-runner/mocha_runner __tests__/**/*.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "webpack --progress -p --config webpack.prod.conf.js",
+    "build::test": "webpack --progress -p",
+    "lint": "eslint ./app",
+    "testonly": "BABEL_DISABLE_CACHE=1 NODE_ENV=test mocha $npm_package_options_mocha",
+    "test": "npm run lint && npm run testonly"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "asteroid": "^2.0.2",
+    "axios": "^0.15.3",
+    "chart.js": "^1.1.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "d3": "^3.5.17",
+    "halogen": "^0.2.0",
+    "history": "^2.1.1",
+    "immutability-helper": "^2.2.2",
+    "lodash": "^4.16.4",
+    "medium-draft": "^0.5.2",
+    "moment": "^2.18.1",
+    "prop-types": "^15.5.10",
+    "qs": "^6.3.0",
+    "random-string": "^0.1.2",
+    "react": "^15.4.2",
+    "react-addons-shallow-compare": "^15.4.2",
+    "react-chartjs": "^0.8.0",
+    "react-codemirror": "^0.3.0",
+    "react-collapse": "^2.3.3",
+    "react-color": "^2.13.4",
+    "react-data-grid": "^2.0.3",
+    "react-dates": "^8.2.1",
+    "react-datetime": "^2.8.8",
+    "react-dnd": "^2.1.4",
+    "react-dnd-html5-backend": "^2.1.2",
+    "react-dom": "^15.4.2",
+    "react-grid-layout": "^0.14.7",
+    "react-height": "^2.2.0",
+    "react-modal": "^1.7.7",
+    "react-modal-dialog": "^4.0.5",
+    "react-monaco-editor": "^0.8.1",
+    "react-motion": "^0.4.7",
+    "react-progressbar.js": "^0.2.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "react-select": "^1.0.0-rc.2",
+    "react-split-pane": "^0.1.62",
+    "react-tabs": "^0.8.2",
+    "react-tap-event-plugin": "^2.0.1",
+    "react-tooltip": "^3.2.2",
+    "react-virtualized": "^9.7.4",
+    "recompose": "^0.23.5",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0",
+    "rheostat": "^2.1.0",
+    "rupture": "^0.6.1",
+    "s-grid": "^1.2.0",
+    "shortid": "^2.2.6",
+    "timer-stopwatch": "^0.2.0",
+    "uuid": "^3.0.1",
+    "validator": "^6.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.7.7",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-lodash": "^3.1.4",
+    "babel-plugin-webpack-loaders": "^0.4.0",
+    "babel-polyfill": "^6.8.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "chai": "^3.5.0",
+    "css-loader": "^0.23.1",
+    "enzyme": "^2.2.0",
+    "eslint": "^2.10.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-babel": "^3.2.0",
+    "eslint-plugin-import": "^1.8.0",
+    "eslint-plugin-jsx-a11y": "^1.2.0",
+    "eslint-plugin-react": "^5.1.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.16.1",
+    "jsdom": "^8.5.0",
+    "mocha": "^2.4.5",
+    "node-libs-browser": "^1.0.0",
+    "postcss-loader": "^0.9.1",
+    "react-addons-test-utils": "^15.0.2",
+    "react-css-modules": "^3.7.6",
+    "react-hot-loader": "^1.3.0",
+    "sinon": "^1.17.4",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.0.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "extends": [
+      "airbnb"
+    ],
+    "rules": {
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allow": [
+            "_id"
+          ]
+        }
+      ]
+    }
+  }
+}

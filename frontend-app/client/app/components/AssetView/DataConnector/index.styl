@@ -1,0 +1,121 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/settings'
+
+modal-width=430
+label-input-spacing=15
+.Data-connector-wrapper-open
+  background-color rgba(0, 0, 0, 0.5)
+  transition border 1.25s linear,color 1.25s linear,background-color 1.25s linear
+  position absolute
+  width 100%
+  height 100%
+  top 0
+  left 0
+  right 0
+  bottom 0
+  display flex
+  justify-content center
+  align-items center
+  z-index 999
+  form
+    width rem-calc(modal-width - 30)
+    display flex
+    flex-direction column
+    label
+      font-size rem-calc(13)
+      font-weight 400
+      color #777777
+      align-items center
+    input
+      outline none
+      padding rem-calc(5)
+      border-radius rem-calc(3)
+      box-shadow none
+      border 1px solid rgba(0,0,0,0.15)
+      transition border .25s linear,color .25s linear,background-color .25s linear
+      font-size rem-calc(13)
+      &:focus
+        border 1px solid rgba(0,0,0,0)
+        background-color #f5f5f5
+    button
+      margin-top rem-calc(10)
+      align-self flex-end
+      width rem-calc(100)
+      outline none
+      border none
+      border-radius 3px
+      padding rem-calc(8) rem-calc(16)
+      cursor pointer
+      font-size rem-calc(14)
+      border-radius rem-calc(3)
+    .btn-wrapper
+      display flex
+      flex 1
+      justify-content space-between
+      .submit
+        background-color #f26450
+        color #fff
+        align-self flex-end
+      .cancel
+        background-color #ddd
+        margin-left rem-calc(30)
+    >label
+      margin rem-calc(5) 0
+      display flex
+      flex-direction row
+      flex 1
+      span
+        flex 1
+        text-align end
+        padding-right rem-calc(label-input-spacing)
+      input
+        flex 3
+    >div
+      display flex
+      flex 1
+      margin rem-calc(5) 0
+      label:first-child
+        flex 0.9
+        display flex
+        span
+          flex 1
+          text-align end
+          padding-right rem-calc(label-input-spacing)
+        input
+          width rem-calc(131)
+      label:last-child
+        flex 0.609
+        display flex
+        flex-direction row
+        justify-content flex-end
+        span
+          flex 1
+          text-align end
+          padding-right rem-calc(label-input-spacing)
+        input
+          width rem-calc(90)
+
+.Data-connector-wrapper-close
+  display none
+
+.modal-wrapper
+  background-color #fff
+  display flex
+  flex-direction column
+  padding rem-calc(20) rem-calc(35) rem-calc(20) 0
+  border-radius rem-calc(4)
+  div
+    margin-left rem-calc(30)
+  h5
+    font-size rem-calc(16)
+    font-weight 400
+    color #545454
+    margin rem-calc(15) 0
+
+.modal-wrapper-creator
+  background-color #fff
+  display flex
+  flex-direction column
+  border-radius rem-calc(4)
+  padding-radius rem-calc(20)

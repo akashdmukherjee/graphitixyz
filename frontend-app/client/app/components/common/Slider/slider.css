@@ -1,0 +1,59 @@
+.rheostat {
+  overflow: visible;
+}
+
+.rheostat-background {
+  background-color: #fcfcfc;
+  border: 2px solid #d8d8d8;
+  position: relative;
+  cursor: pointer;
+}
+
+.rheostat-progress {
+  background-color: #f26450;
+  position: absolute;
+  height: 4px;
+  top: 0;
+  cursor: pointer;
+}
+
+.rheostat-handle {
+  background-color: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 20%;
+  height: 18px;
+  outline: none;
+  z-index: 2;
+  width: 18px;
+  border-radius: 50%;
+  top: -8px;
+  margin-left: -8px;
+  cursor: pointer;
+}
+
+.rheostat-handle:hover .input-tooltip {
+  width: 50px;
+  position: absolute;
+  top: -20px;
+  left: -14px;
+}
+
+.rheostat-handle:before,
+.rheostat-handle:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #dadfe8;
+}
+
+.rheostat.is .rheostat-progress {
+  background-color: transparent;
+}
+
+.rheostat.gt .rheostat-background {
+  border: 3px solid #f26450;
+}
+
+.rheostat.gt .rheostat-progress {
+  background-color: #d8d8d8;
+}

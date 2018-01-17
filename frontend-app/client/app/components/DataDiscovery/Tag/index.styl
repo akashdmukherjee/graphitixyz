@@ -1,0 +1,45 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/settings'
+
+tag-label-color=#5d5d5d
+.tag-wrapper
+  width auto
+  padding rem-calc(1) rem-calc(8)
+  border-radius rem-calc(3)
+  border 1px solid #f0f0f0
+  background rgba(255,255,255,.97)
+  margin rem-calc(3) 0
+  margin-right rem-calc(10)
+  cursor pointer
+  line-height 1.3
+  display inline-block
+  &:hover
+    border-color rgba(0,0,0,.15)
+    background-color #fff
+    .tag-label
+      color rgba(0,0,0,0.8)
+
+.tag-wrapper-gpt
+  @extend .tag-wrapper
+  padding rem-calc(4) rem-calc(8)
+  &:hover
+    background-color color-graphiti-red
+    &>span
+      color #fff
+
+.tag-wrapper-gpt-active
+  @extend .tag-wrapper-gpt
+  background-color color-graphiti-red
+  &>span
+    color #fff
+
+
+.tag-label
+  font-size rem-calc(12)
+  color rgba(0,0,0,.6)
+  line-height 1.9
+
+.tag-close
+  cursor pointer
+  margin-left 5px

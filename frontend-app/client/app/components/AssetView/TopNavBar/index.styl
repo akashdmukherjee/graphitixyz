@@ -1,0 +1,211 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/settings'
+
+icon-size = 24
+icon-color = rgba(80, 80, 80, 0.6)
+.tnb-main-wrapper
+  align-self center
+  display flex
+  flex 1
+  height 100%
+  .left-wrapper
+    flex .4
+    display flex
+    align-items center
+  .middle-wrapper
+    flex .5
+    display flex
+    align-items center
+  .right-wrapper
+    flex .1
+    display flex
+    align-items center
+
+.company-logo
+  background-image url('../../../images/graphiti.png')
+  width rem-calc(32)
+  height rem-calc(32)
+  margin-left rem-calc(10)
+  background-size contain
+  background-repeat no-repeat
+
+.search-input
+  width 100%
+  margin-left rem-calc(10)
+  position relative
+  input
+    outline none
+    border none
+    border-bottom 1px solid #e8e8e8
+    height rem-calc(30)
+    font-size rem-calc(13)
+    width 100%
+    margin-right rem-calc(10)
+    border-radius rem-calc(3)
+    background-color #fff
+    padding-left rem-calc(24)
+    &::-webkit-input-placeholder
+          color #999
+  i
+    position absolute
+    left rem-calc(8)
+    top 28%
+    color #999
+    font-size rem-calc(13)
+
+.btn
+  padding rem-calc(1) rem-calc(10)
+  margin auto rem-calc(20)
+  border-radius rem-calc(3)
+
+.icon
+  color icon-color
+
+.back-btn
+  @extend .btn
+  i
+    @extend .icon
+    font-size rem-calc(24)
+    &:hover
+      color rgba(80, 80, 80, 0.7)
+
+.permissions-preview
+  display flex
+  width 100%
+
+.share-wrapper
+  position relative
+  z-index 2
+  .share-dialog
+    display flex
+    flex-flow column
+    position absolute
+    width rem-calc(400)
+    background-color #fff
+    right rem-calc(-10)
+    padding rem-calc(10)
+    border 1px solid #e8e8e8
+    border-radius rem-calc(3)
+    top rem-calc(35)
+    transition all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s
+    &:after,
+      &:before
+        bottom 100%
+        border solid transparent
+        content ' '
+        height 0
+        pointer-events none
+        position absolute
+        width 0
+    &:before
+      border-bottom-color #e8e8e8
+      margin-left -11px
+      border-width 11px
+      right 0
+    &:after
+      border-bottom-color #fff
+      border-width 10px
+      margin-left -10px
+      right 0.04rem
+
+    .invite
+      display flex
+      padding rem-calc(5) 0
+      cursor pointer
+      &:hover
+        >h5
+          color #f26450
+      h5
+        font-size rem-calc(14)
+        font-weight 400
+        color #444
+    div h5
+      font-size rem-calc(12)
+      font-weight 300
+      color #555
+      margin-top rem-calc(5)
+    .inputs-wrapper
+      display flex
+      flex-flow row
+      padding-top rem-calc(5)
+      >input
+        outline none
+        width 100%
+        padding rem-calc(5)
+        border-radius rem-calc(3)
+        box-shadow none
+        border 1px solid rgba(0,0,0,0.15)
+        border-right none
+        border-top-right-radius 0
+        border-bottom-right-radius 0
+        transition border .25s linear,color .25s linear,background-color .25s linear
+        font-size rem-calc(12)
+        color text-normal-light-color
+        font-weight 400
+
+.share-dialog-hide
+  display none
+
+.triangle::after, .triangle::before {
+  bottom: 100%;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+}
+
+.triangle::before {
+  border-bottom-color: #e8e8e8;
+  margin-left: -11px;
+  border-width: 11px;
+  right: 0;
+}
+
+.triangle::after {
+  border-bottom-color: #fff;
+  border-width: 10px;
+  margin-left: -10px;
+  right: 0.09rem;
+}
+
+.menu-btn
+  @extend .btn
+  i
+    @extend .icon
+    font-size rem-calc(20)
+    &:hover
+      color rgba(80, 80, 80, 0.7)
+  padding rem-calc(8)
+  transition 0.25s ease-in-out
+  &:hover
+    background-color #ddd
+
+.toggle-menu
+  height 15px
+  width 18px
+  span
+    display block
+    width 100%
+    height 2px
+    position relative
+    margin 0 0 4px 0
+    position relative
+    transition 0.25s ease-in-out
+
+.toggle-menu-open
+  @extend .toggle-menu
+  span
+    // background rgba(0, 0, 0, 0.33)
+    background-color #777
+
+.toggle-menu-close
+  @extend .toggle-menu
+  span
+    // background rgba(0, 0, 0, 0.22)
+    background-color #777
+
+.working-copies-wrapper
+  position relative

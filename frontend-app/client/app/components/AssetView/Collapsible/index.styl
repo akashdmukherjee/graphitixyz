@@ -1,0 +1,34 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+.collapsible-wrapper
+  display flex
+  flex-direction column
+  .trigger-wrapper
+    padding rem-calc(10) rem-calc(10)
+    display flex
+    align-items center
+    justify-content space-between
+    background-color #f7f8fa
+    border-bottom 1px solid #eeeff2
+    cursor pointer
+    position relative
+    &:hover
+      background-color #eeeff2
+    .left-icon
+      position absolute
+      left 0
+      top 0
+      line-height rem-calc(45)
+      margin-left rem-calc(10)
+      color rgba(167, 167, 167, 0.54)
+      font-size rem-calc(18)
+    h5
+      color #71767a
+      font-size rem-calc(14)
+      font-weight 300
+      // margin-left rem-calc(30)
+      user-select none
+    i
+      font-size rem-calc(20)
+      color rgba(0, 0, 0, 0.62)

@@ -1,0 +1,89 @@
+.Menu {
+  position: relative;
+  text-align: left;
+  transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+  cursor: pointer;
+}
+
+.Menu:hover {
+  background-color: #ececec;
+}
+
+.Menu.btn:hover {
+  background-color: #f26450;
+}
+.Menu.btn:hover > a {
+  border: none!important;
+}
+
+.Menu > ul.Menus {
+  position: absolute;
+  transition: all 1.9s;
+  visibility: hidden;
+  transition: visibility 0s, opacity 1.5s linear;
+}
+
+.Menu:hover > ul.Menus {
+  left: 100%;
+  top: 0;
+  visibility: visible;
+}
+
+.Menu-link, .Menu-file-input, 
+.Menu span input {
+  color: #777777;
+  font-size: 13px;
+  font-weight: 400;
+  display: block;
+  text-decoration: none;
+  padding: 0.625rem;
+  padding-right: 2.325rem;
+  border: none;
+}
+
+.Menu-link-btn {
+  width: auto;
+  background-color: #f26450;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.325rem;
+  margin: 0.3rem;
+  border-radius: 3px;
+  cursor:  pointer;
+  border: none;
+}
+
+.Menu-file-input {
+  position: relative;
+}
+
+.Menu-file-input input {
+  display: none;
+}
+/* Menu Input*/
+
+.Menu span input:enabled,
+.Menu span input:disabled {
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+
+
+/* FilterSet Menus*/
+.Menus.FilterSet .Menu.btn {
+  text-align: center;
+  margin: 15px 0; 
+}
+
+.Menus.FilterSet .Menu .Menu-link-btn {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.Menus.FilterSet .Menu .Menu-link {
+  padding-left: 20px;
+}

@@ -1,0 +1,60 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../styles/custom'
+@import '../../styles/settings'
+
+navbar-height = 54px
+bg-color = #fff
+.dav-main-wrapper
+  display flex
+  flex-direction column
+  flex 1
+  background-color bg-color
+  height 100vh
+
+.top-navbar
+  height rem-calc(46)
+  box-shadow rgba(0, 0, 0, 0.14902) 0px 0px 1px
+  z-index 1
+
+.footer-navbar
+  height rem-calc(navbar-height)
+  display flex
+  justify-content center
+  box-shadow rgba(0, 0, 0, 0.14902) 0px 0px 1px
+
+.main-container
+  display flex
+  flex 1
+  .content
+    flex 1
+    display flex
+    flex-direction column
+    position relative
+
+.right-sidebar
+  box-shadow rgba(0, 0, 0, 0.06) -1px 0px 0px
+  overflow-y hidden
+  background-color #fafafa
+  box-sizing border-box
+  margin 0
+  padding 0
+  transition 0.25s ease-in-out
+
+.right-sidebar-open
+  @extend .right-sidebar
+  width rem-calc(250)
+
+.right-sidebar-close
+  @extend .right-sidebar
+  width 0
+
+.fixed-layer
+  position fixed
+  background #000
+  opacity 0.25
+  width 100vw
+  height 100vh
+  top 0
+  left 0
+  z-index 5

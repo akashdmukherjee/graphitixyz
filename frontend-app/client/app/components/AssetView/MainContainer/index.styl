@@ -1,0 +1,29 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/settings'
+
+.main-container-wrapper
+  margin 0
+  width 100%
+  height 100%
+  position relative
+  button
+    width rem-calc(130)
+    outline none
+    border 1px solid #ddd
+    height rem-calc(30)
+    border-radius rem-calc(3)
+    background-color #fff
+    position absolute
+    top rem-calc(20)
+    left 45%
+    color #444
+    font-size rem-calc(13)
+    font-weight 400
+    transition opacity .2s ease-out
+    cursor pointer
+    z-index 999
+    &:hover
+      background-color #ddd
+      color #333
+      transition opacity .2s ease-in

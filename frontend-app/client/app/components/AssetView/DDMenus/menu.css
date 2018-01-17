@@ -1,0 +1,40 @@
+.Menu {
+  position: relative;
+  text-align: left;
+  transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+}
+
+.Menu:hover > a {
+  background-color: #ececec;
+}
+
+.Menu > a {
+  padding: 5px 0;
+  padding-left: 5px;
+  background: rgba(0, 0, 0, .05);
+  margin: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+.Menu > ul.Menus, .Menu > div.Menus {
+  position: absolute;
+  transition: all 1.9s;
+  visibility: hidden;
+  transition: visibility 0s, opacity 1.5s linear;
+}
+
+.Menu:hover > ul.Menus, .Menu:hover > div.Menus {
+  left: 100%;
+  top: 0;
+  visibility: visible;
+}
+
+.Menu-link {
+  color: #5d5d5d;
+  display: block;
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding: 0.525rem;
+  padding-right: 2.325rem;
+}

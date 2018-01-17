@@ -1,0 +1,84 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/settings'
+
+.dropdown-menu-wrapper
+  flex 1
+  &>h5
+    font-weight 400
+    color #545454
+    font-size rem-calc(15)
+  .input-text
+    padding 10px 0
+    border none
+    border-bottom 1px solid transparent
+    outline none
+    font-size 0.925em
+    width 100%
+    &:focus
+      border-bottom 1px solid color-graphiti-red
+
+.dropdown-menu-wrapper h3
+  user-select none
+  padding rem-calc(10) 0
+  font-weight 400
+  font-size rem-calc(13)
+  cursor pointer
+  align-self center
+  color rgba(101, 97, 97, 0.88)
+  &:hover
+    color #000
+
+.dropdown-menu-wrapper h3 > i
+  font-size 20px
+  margin-left 5px
+  margin-right 10px
+  margin-top -2px
+  position absolute
+
+.dropdown-menu-list
+  color blue
+  width auto
+  list-style none
+  position absolute
+  background-color #fff
+  box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+  width auto
+  border-radius rem-calc(3)
+  >li:first-child
+    border-top-left-radius rem-calc(3)
+    border-top-right-radius rem-calc(3)
+  >li:last-child
+    border-bottom-left-radius rem-calc(3)
+    border-bottom-right-radius rem-calc(3)
+  &:after 
+    content ""
+    position absolute
+    width 12px
+    height 12px
+    background #fff
+    transform rotate(45deg) /* Prefixes... */
+    top -6px
+    left 16px
+    box-shadow 2px 2px 2px 2px rgba(0,0,0,.5)
+    z-index -1
+
+
+.dropdown-menu-item
+  padding 10px 20px
+  color #545454
+  cursor pointer
+  font-weight 300
+  font-size rem-calc(13)
+  width 100%
+  &:hover
+    background-color rgba(220, 220, 219, 0.38)
+    color #545454
+
+.dropdown-menu-item-active
+  @extend .dropdown-menu-item
+  background-color color-graphiti-red
+  color #fff
+  &:hover
+    background-color color-graphiti-red
+    color #fff

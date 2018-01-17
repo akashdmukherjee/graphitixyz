@@ -1,0 +1,2 @@
+export const DATA_ASSET_VIEW = 'DATA_ASSET_VIEW';
+export const SQL_ASSET_VIEW = 'SQL_ASSET_VIEW';

@@ -1,0 +1,56 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/settings'
+@import '../../../styles/custom'
+
+header-grey-color-dark-2 = rgba(84, 84, 84, 0.99)
+header-grey-color-dark-1 = rgba(80, 80, 80, 0.77)
+
+.new-user-wrapper
+  margin auto
+  h3
+    color header-grey-color-dark-2
+  h5
+    color header-grey-color-dark-1
+    margin rem-calc(10) 0
+    font-weight 500
+  fieldset
+    padding rem-calc(30) rem-calc(120)
+    text-align center
+    margin 0 auto
+    border-radius rem-calc(25)
+    border 1px solid rgba(80, 80, 80, 0.24)
+
+.features
+  display flex
+  // margin rem-calc(20) 0
+
+.gpt-logo
+  background-image url('../../../images/graphiti.png')
+  background-repeat no-repeat
+  background-size cover
+  width 45px
+  height 45px
+
+.btn-gpt-team
+  @extend .btn-gpt
+  width auto
+  font-size rem-calc(14)
+  margin-top rem-calc(20)
+
+.or-line
+  position relative
+  hr
+    width calc(100% - 350px)
+    margin 0 auto
+    display block
+    height 1px
+    border 0
+    border-top 1px solid rgba(80, 80, 80, 0.24)
+    padding 0 
+  h5
+    position absolute
+    top rem-calc(-22)
+    left calc(100% - 10px)
+    background-color #fff
+    padding rem-calc(2)

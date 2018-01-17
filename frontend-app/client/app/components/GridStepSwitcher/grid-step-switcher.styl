@@ -1,0 +1,43 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+@import '../../styles/settings'
+
+.grid-size-switcher
+  margin-right rem-calc(5)
+  margin-left rem-calc(5)
+  display inline-block
+  input
+    background-color color-main-light
+    color color-main-dark
+    border none
+
+.menu-input-text
+  padding rem-calc(2) rem-calc(10)
+  border rem-calc(1) solid lighten(color-main-dark, 20%)
+  margin-top rem-calc(-2)
+  outline none
+  &[name=grid-step]
+    width rem-calc(40)
+
+.menu-button
+  background-color transparent
+  border none
+  outline none
+  font-size rem-calc(18)
+  cursor pointer
+  padding rem-calc(5)
+  color color-main-light
+  vertical-align middle
+  transition .3s color
+  &:hover
+    color color-main-light
+  &::before
+    vertical-align middle
+
+.menu-button-black
+  composes menu-button
+  color color-menu-top-icons
+  &:hover
+    color color-main-dark
+

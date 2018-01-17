@@ -1,0 +1,7 @@
+node_modules
+client/public/node_modules/
+client/public/assets/
+client/public/index.html
+client/public/yarn.lock
+npm-debug.log
+.DS_Store

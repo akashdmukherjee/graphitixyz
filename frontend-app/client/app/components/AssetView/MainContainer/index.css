@@ -1,0 +1,31 @@
+.react-grid-Container {
+  width: 100%!important;
+  height: 100vh!important;
+  overflow: scroll!important;
+}
+
+.react-grid-Main,
+.react-grid-Grid,
+.react-grid-Viewport {
+  width: 100%!important;
+  overflow: scroll!important;
+}
+
+.react-grid-Row:hover .react-grid-Cell {
+  background-color: #f26450!important;
+}
+
+.react-grid-Row:hover .react-grid-Cell__value {
+  color: #fff!important;
+}
+
+.widget-HeaderCell__value, .react-grid-HeaderCell-sortable {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.61);
+}
+
+.react-grid-Cell__value {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.59);
+  font-weight: 600;
+}

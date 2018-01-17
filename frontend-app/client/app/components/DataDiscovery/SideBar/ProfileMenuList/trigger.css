@@ -1,0 +1,66 @@
+/*.NewAssetMenus-wrapper:hover {
+	background-color: #da5a48;
+	color: #fff;
+	transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+}*/
+
+.profile-menu {
+	width: 100%;
+	cursor: pointer;
+}
+
+.profile {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	padding: 25px 0;
+	padding-left: 10px;
+}
+
+.profile-menu:hover {
+	background-color: rgba(0,0,0,0.06);
+	transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+}
+
+.profile-menu .user-pic {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	text-align: center;
+	margin-right: 10px;
+	line-height: 32px;
+  border: 1px solid;
+}
+
+/*.profile-menu .user-pic i {
+	color: #fff;
+}*/
+
+.profile-menu .user-detail {
+	display: flex;
+	flex-flow: column;
+}
+
+.profile-menu .user-detail h4 {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.profile-menu .user-detail h5 {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.profile-menu .arrow-down {
+  position: absolute;
+	left: 180px;
+	top: 30px;
+}
+
+.profile-menu .arrow-down i {
+	font-size: 12px;
+}
+
+.settings {
+  margin-left: 10px;
+}

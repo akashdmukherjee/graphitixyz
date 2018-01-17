@@ -1,0 +1,13 @@
+.react-grid-item {
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
+.react-grid-item.react-grid-placeholder {
+  background: transparent;
+  border: 1px solid #c3c3c3;
+}
+
+.layout {
+  background-color: transparent;
+}

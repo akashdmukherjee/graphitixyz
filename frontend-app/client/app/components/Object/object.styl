@@ -1,0 +1,65 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+@import '../../styles/settings'
+
+.draggable-object
+    position absolute
+    cursor move
+    display block
+    border 0px solid color-block-resize-border
+    top 0
+    left 0
+    padding rem-calc(2)
+    background-color color-block-bg
+    box-shadow rem-calc(4) rem-calc(4) rem-calc(6) rgba(0, 0, 0, .1)
+    z-index 4
+    &.full-size
+        &::after
+            content " "
+            display block
+            position absolute
+            width rem-calc(2)
+            background-color color-main-dark
+            height 100%
+            top 0
+            left 50%
+            transform translateX(-50%)
+
+.object-name
+    font-size rem-calc(14)
+    font-weight bold
+    padding rem-calc(5)
+    text-align center
+    background-color color-block-bg //AKASH EDITING
+    color color-main-contrast
+.object-expand
+    position absolute
+    bottom rem-calc(10)
+    right rem-calc(10)
+    cursor pointer
+
+.object-dropzones-container
+    position absolute
+    top 0
+    right 0
+    transform translateX(100%)
+.object-dropzone
+    width rem-calc(120)
+    border rem-calc(1) solid color-main-dark
+    min-height rem-calc(40)
+    height auto
+    margin-bottom rem-calc(5)
+    background-color color-main-light
+    padding rem-cacl(5) rem-calc(10)
+    font-size rem-calc(14)
+.object-dropzones-label
+    margin-top rem-calc(10)
+    font-size rem-calc(14)
+.object-content-wrapper
+    width 50%
+    height 100%
+    float left
+.object-dev-button
+    float right
+    cursor pointer

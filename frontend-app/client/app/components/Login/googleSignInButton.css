@@ -1,0 +1,40 @@
+#gSignInWrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+#gSignInBtn {
+  display: inline-block;
+  border-radius: 2px;
+  white-space: nowrap;
+  margin-top: 30px;
+  margin-left: 15px;
+  border: 1px solid rgb(249, 201, 201);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+  background: rgba(242, 100, 80, 0.03);
+  color: #f26450;
+  opacity: 0.75;
+  transition: border 0.25s linear, color 0.25s linear,
+    background-color 0.1s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+}
+
+#gSignInBtn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+span.buttonText {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 12px 42px;
+  font-size: 14px;
+  font-weight: 400;
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: 'Roboto', sans-serif;
+}
+
+span.buttonText i {
+  margin-right: 10px;
+}

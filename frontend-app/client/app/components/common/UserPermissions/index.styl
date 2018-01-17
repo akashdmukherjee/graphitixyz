@@ -1,0 +1,72 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+.user-permissions
+  display flex
+  flex-flow column
+  flex 1
+  padding-left 10px
+  .label
+    font-weight 400
+    font-size rem-calc(11)
+    text-transform uppercase
+  .users
+    display flex
+    flex-flow row
+    align-items center
+    margin-top rem-calc(5)
+    > div
+      width rem-calc(32)
+      height rem-calc(32)
+      background-color #f3b562
+      border 1px solid transparent
+      border-radius 100%
+      text-align center
+      color #fff
+      font-size rem-calc(11)
+      cursor pointer
+    .user
+      display inline-block
+      line-height 2.6
+      margin-left rem-calc(-6)
+      border 2px solid #fff
+    .akash
+      display inline-block
+      margin-left rem-calc(-6)
+      border 2px solid #fff
+      background-size contain
+      background-image url(../../../images/akash.jpg)
+    .geetish
+      display inline-block
+      margin-left rem-calc(-6)
+      border 2px solid #fff
+      background-size contain
+      background-image url(../../../images/geetish.jpg)
+    .devajit
+      display inline-block
+      margin-left rem-calc(-6)
+      border 2px solid #fff
+      background-size contain
+      background-image url(../../../images/devajit.jpg)
+    .more-users
+      display inline-block
+      width auto
+      height auto
+      h5
+        font-size rem-calc(12)
+        font-weight 400
+        text-transform uppercase
+      line-height 2.5
+      border 2px solid #fff
+      background-color transparent
+      border none
+      border-radius none
+      color #999
+      margin-left rem-calc(5)
+    .edit
+      display inline-block
+      border none
+      background-color transparent
+      color #aaa
+      font-size rem-calc(26)
+      margin-right rem-calc(6)

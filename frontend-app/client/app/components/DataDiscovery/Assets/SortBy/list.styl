@@ -1,0 +1,67 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+color-main-contrast-light = #F3B562
+color-graphiti-orange = #F3B562
+color-main-contrast-light2 = #F1797A
+color-graphiti-red = #F26450
+color-gpt-red-light-1 = #ff8371
+color-gpt-red-dark-1 = #da5a48
+color-gpt-blue = #0fa2e2
+color-gpt-blue-dark-1 = #0d91ca
+color-gpt-label-blue-dark = #5692ad
+color-gpt-darkgrey = #717171
+color-gpt-purple = #615dae
+
+.list-wrapper
+  list-style none
+  background-color #fff
+  box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+  width auto
+  border-radius rem-calc(3)
+  >li:first-child
+    border-top-left-radius rem-calc(3)
+    border-top-right-radius rem-calc(3)
+  >li:last-child
+    border-bottom-left-radius rem-calc(3)
+    border-bottom-right-radius rem-calc(3)
+  &:after,
+  &:before 
+    border solid transparent 
+    content ' ' 
+    height 0 
+    pointer-events none 
+    position absolute 
+    width 0
+    top rem-calc(-20)
+    right rem-calc(16)
+   
+  &:before 
+    top rem-calc(-22)
+    border-bottom-color #e8e8e8 
+    margin-left -11px 
+    border-width 11px 
+   
+  &:after 
+    border-bottom-color #fff 
+    border-width 10px 
+    margin-left -10px 
+
+.list-item
+  padding 10px 20px
+  color #545454
+  cursor pointer
+  font-weight 300
+  font-size rem-calc(13)
+  width 100%
+  &:hover
+    background-color rgba(220, 220, 219, 0.38)
+    color #545454
+
+.list-item-active
+  @extend .list-item
+  background-color color-graphiti-red
+  color #fff
+  &:hover
+    background-color color-graphiti-red
+    color #fff

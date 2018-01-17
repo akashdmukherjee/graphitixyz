@@ -1,0 +1,45 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+color-main-contrast-light = #F3B562
+color-graphiti-orange = #F3B562
+color-main-contrast-light2 = #F1797A
+color-graphiti-red = #F26450
+color-gpt-red-light-1 = #ff8371
+color-gpt-red-dark-1 = #da5a48
+color-gpt-blue = #0fa2e2
+color-gpt-blue-dark-1 = #0d91ca
+color-gpt-label-blue-dark = #5692ad
+color-gpt-darkgrey = #717171
+color-gpt-purple = #615dae
+
+text-color=#555
+.row
+  margin rem-calc(8) 0
+  display flex
+  position relative
+  .color-preview
+    font-weight 400
+    font-size rem-calc(13)
+    padding rem-calc(3) rem-calc(5)
+    width 100%
+    cursor pointer
+    border none
+    outline none
+    border-radius rem-calc(3)
+
+.apply
+  display flex
+  justify-content flex-end
+  button
+    padding rem-calc(3) rem-calc(8)
+    border 1px solid #eaeaea
+    cursor pointer
+    font-size rem-calc(13)
+    font-weight 300
+    color #fff
+    outline none
+    border-radius 3px
+    background-color color-graphiti-red
+    &:hover
+      background-color color-gpt-red-dark-1

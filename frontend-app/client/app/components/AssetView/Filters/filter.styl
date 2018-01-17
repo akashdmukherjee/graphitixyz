@@ -1,0 +1,99 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/settings'
+@import '../../../styles/animations'
+
+.filter-wrapper
+  flex 1
+  height 100%
+  text-align left
+  border none
+  // border 1px solid rgba(80, 80, 80, 0.24)
+  // padding rem-calc(2) rem-calc(4) rem-calc(5)
+  margin-right rem-calc(40)
+  position relative
+  cursor pointer
+  .filter
+    height 100%
+    transition border 0.25s linear, color 0.25s linear, background-color 0.25s linear
+    display flex
+    border-radius rem-calc(3)
+    &:hover
+      background-color #e8e8e8
+    .filter-tags-wrapper
+      position absolute
+      top rem-calc(44)
+      background-color #fff
+      box-shadow 0 1px 9px 1px rgba(0,0,0,.12), 0 1px 3px 0px hsla(0,0%,88%,.25)
+      transition all 0.3s cubic-bezier(.25,.8,.25,1)
+      right rem-calc(0)
+      width rem-calc(180)
+      height rem-calc(384)
+      z-index 999
+      padding rem-calc(10)
+      border-radius rem-calc(3)
+      @extend .animation-fade-in
+      &:after,
+      &:before {
+        border: solid transparent;
+        content: ' ';
+        height: 0;
+        pointer-events: none;
+        position: absolute;
+        width: 0;
+        top: -20px;
+        left: 50%;
+      }
+
+      &:before {
+        border-bottom-color: #e8e8e8;
+        margin-left: -11px;
+        border-width: 12px;
+        top: -24px;
+        left: 49.4%;
+      }
+
+      &:after {
+        border-bottom-color: #fff;
+        border-width: 10px;
+        margin-left: -10px;
+      }
+      .filter-tags
+        height 100%
+        width 100%
+        overflow-y scroll
+        overflow-x visible
+    .add
+      cursor pointer
+      line-height 1.65
+      padding 0 rem-calc(8)
+      user-select none
+      &:hover
+        background-color rgba(80, 80, 80, 0.24)
+  .menus
+    position absolute
+    margin-left rem-calc(18)
+    margin-top rem-calc(-5)
+
+.filter-status
+  margin 0
+  position relative
+  width 100%
+  text-align left
+  padding-left rem-calc(10)
+  h5
+    font-size rem-calc(13)
+    font-weight 400
+    color #222222
+    line-height 2.05
+  i
+    position absolute
+    top 0
+    right rem-calc(5)
+    line-height 3.05
+    font-size 10px
+    color #777
+.filter-status-empty
+  @extend .filter-status
+  h5
+    color #b3b3b3

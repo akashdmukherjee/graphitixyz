@@ -1,0 +1,27 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+@import '../../styles/settings'
+
+.sortable-menu-item
+  margin-left rem-calc(10)
+
+.left-menu-item
+  box-shadow 0 1px 3px rgba(0,0,0,0.08)
+  padding rem-calc(15) rem-calc(10) rem-calc(15) rem-calc(20) // AKASH EDITING
+  transition background-color .1s, color .1s
+  cursor move
+  cursor grab
+  cursor -moz-grab
+  cursor -webkit-grab
+  color color-main-dark
+  margin 0 rem-calc(5) rem-calc(5)
+  border rem-calc(1) solid darken(color-main-light, 10%)
+  user-select none
+  cursor pointer
+  border-radius rem-calc(2)
+  font-size rem-calc(14)
+  font-weight 300
+  &:hover
+    background-color color-graphiti-orange
+    color color-main-light

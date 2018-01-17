@@ -1,0 +1,225 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../../../styles/settings'
+@import '../../../../../styles/animations'
+
+.button
+  outline none
+  padding rem-calc(7) 0
+  background-color #fff
+  border 1px solid #ddd
+  border-radius rem-calc(3)
+  height 35px
+  color #444
+  font-size rem-calc(14)
+  cursor pointer
+  &:active,&:focus,&:hover
+    background-color #f26450
+    color #fff
+    border 1px solid transparent
+
+.submenu-wrapper
+  display block
+  flex-flow column
+  margin rem-calc(7)
+  background-color #fff
+  @extend .animation-fade-in
+  >div
+    padding rem-calc(5)
+    font-size rem-calc(14)
+  .conditional-input
+    padding rem-calc(7) rem-calc(5)
+    outline none
+    border 1px solid rgba(80, 80, 80, 0.25)
+    border-radius rem-calc(3)
+    width 100%
+    margin rem-calc(3) 0
+    font-size rem-calc(14)
+    display block
+    &:focus
+      background-color #ccc
+      transition opacity .21s ease-in
+      border 1px solid transparent
+  .header
+    font-style none
+    display flex
+    flex-flow row
+    justify-content space-between
+    .labels
+      display flex
+      flex-flow column
+      .label
+        font-weight 500
+        color rgba(0, 0, 0, 0.35)
+      .value
+        font-weight 500
+        color rgba(0, 0, 0, 0.7)
+    .apply-btn
+      @extend .button
+      font-size rem-calc(12)
+      padding 0 rem-calc(10)
+      height rem-calc(25)
+  .conditionals-wrapper
+    display flex
+    flex-flow row
+    .conditionals
+      width rem-calc(160)
+      padding 0
+      margin 0
+    .date-conditionals
+      width rem-calc(160)
+  .conditional-inputs
+    border-top 1px solid rgba(80, 80, 80, 0.12)
+    padding-top rem-calc(3)
+    margin 0 rem-calc(5)
+    .add-another-value
+      font-size rem-calc(12)
+      color #666
+      text-decoration underline
+      cursor pointer
+  .multi-select
+    max-height rem-calc(310)
+    // max-height rem-calc(200)
+    overflow-y scroll
+    &, .conditional-inputs
+      display flex
+      flex-direction column
+      margin-left rem-calc(5)
+
+.slider-wrapper
+  margin 0
+  width 100%
+  .slider
+    margin 0
+
+.slider-inputs
+  width auto
+  display flex
+  justify-content space-between
+  margin-top rem-calc(15)
+  input
+    width rem-calc(60)
+    font-size rem-calc(13)
+    padding rem-calc(5) 0
+    outline none
+    border-radius 3px
+    text-align center
+    box-shadow none
+    border 1px solid #ddd!important
+
+.slider-inputs-is
+  @extend .slider-inputs
+  justify-content center
+.slider-inputs-gt
+  @extend .slider-inputs
+  justify-content center
+
+.dt-wrapper
+  display flex
+  flex-flow column
+  z-index 1
+  position relative
+  ul
+    list-style none
+    li
+      margin rem-calc(20) 0
+      input[type=radio]
+        position absolute
+        visibility hidden
+      input[type=radio]:checked~label:before
+        content '\f192'
+        display block
+        color #f26450
+        font-family FontAwesome
+        position absolute
+        border-radius 100%
+        height 15px
+        width 15px
+        top 2px
+        left 5px
+        margin auto
+        transition background 0.25s linear
+      label
+        display inline
+        position relative
+        font-weight 300
+        font-size 14px
+        height 30px
+        z-index 9
+        cursor pointer
+        transition all 0.25s linear
+        padding-left 40px
+       label:before
+        display block
+        color #bdc3c7
+        font-family FontAwesome
+        position absolute
+        content '\f10c'
+        border-radius 100%
+        height 15px
+        width 15px
+        top 2px
+        left 5px
+        margin auto
+        transition background 0.25s linear
+      input[type=radio]:checked ~ label
+        color #f26450
+  .label-content
+    display inline-block
+  button
+    @extend .button
+  .seperator
+    position relative
+    padding rem-calc(20) 0
+    hr
+      border-color rgba(247, 248, 250, 0.45)
+    span
+      position absolute
+      top 10px
+      left 45%
+      background-color #fff
+      color #757575
+  .days-selector
+    margin 0
+    width 100%
+    display flex
+    flex-flow row
+    align-items flex-end
+    >span
+      display inline-block
+      input
+        width rem-calc(60)
+        font-size rem-calc(13)
+        padding rem-calc(8) 0
+        outline none
+        border-radius 3px
+        text-align center
+        box-shadow none
+        border 1px solid #ddd    
+    .type
+      width rem-calc(70)
+    .days
+      width rem-calc(30)
+      margin-left rem-calc(20)
+
+.dates-wrapper
+  display flex
+  flex-flow row
+  width rem-calc(310)
+
+.inputs
+  width rem-calc(220)
+  margin 0
+  padding 0
+  display block
+  transition all 0.2s ease-in-out
+  margin-left rem-calc(15)
+  height rem-calc(310)
+
+.inputs-date
+  @extend .inputs
+  width rem-calc(380)
+
+.inputs-hide
+  display none
+  transition all 0s ease-out

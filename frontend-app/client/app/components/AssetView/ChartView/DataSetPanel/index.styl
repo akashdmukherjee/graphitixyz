@@ -1,0 +1,48 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../../styles/settings'
+
+.DataSetPanel-wrapper
+  display flex
+  justify-content flex-start
+  margin rem-calc(10) 0
+  padding 0 rem-calc(10)
+  height rem-calc(26)
+  position relative
+  .action-btns
+    display flex
+    height 100%
+    position absolute
+    right rem-calc(10)
+  .content
+    display flex
+    position relative
+    max-width rem-calc(200)
+    .selector
+      text-align left 
+      cursor pointer 
+      user-select none 
+      height 100% 
+      line-height 1.9 
+      transition border 0.25s linear, color 0.25s linear, background-color 0.25s linear 
+      border-radius 3px 
+      position relative 
+      width 100%
+      margin-right rem-calc(10)
+      &:hover
+        background-color #e8e8e8 
+      .text-icons
+        display flex
+        align-items center
+        .label
+          color #222222 
+          font-size 13px 
+          font-weight 400
+          text-overflow ellipsis
+          white-space nowrap
+          overflow hidden
+          display inline-block
+        i
+          font-size 10px 
+          color #777
+          margin 0 10px

@@ -1,0 +1,159 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../styles/settings'
+@import '../../styles/custom'
+
+color-main-contrast-light = #F3B562
+color-graphiti-orange = #F3B562
+color-main-contrast-light2 = #F1797A
+color-graphiti-red = #F26450
+color-gpt-red-light-1 = #ff8371
+color-gpt-red-dark-1 = #da5a48
+color-gpt-blue = #0fa2e2
+color-gpt-blue-dark-1 = #0d91ca
+color-gpt-label-blue-dark = #5692ad
+color-gpt-darkgrey = #717171
+color-gpt-purple = #615dae
+
+.top-headings
+  text-align center
+  margin-top 2.5vh
+
+.mail-radio
+  position relative
+  bottom 2px
+  margin-right 5px
+  background-color color-graphiti-red
+
+.toggle-block
+  display inline-block
+  font-size 15px
+  font-weight 100
+  margin-top 2vh
+  .left-label
+    float left
+    margin-top 5px
+    margin-left 1em
+  .right-label
+    float left
+    margin-top 5px
+    margin-left 1em
+  &after
+    clear both
+
+.email-form 
+  margin 2vh auto
+  width 30vw
+
+.center 
+  text-align center
+
+.email-block
+  text-align center
+
+.email-label
+  margin-right 5px
+
+.next-button
+  background-color color-graphiti-orange
+
+.inp-field 
+  position relative
+  margin-top 1em
+
+.subtext 
+  position absolute
+  top 72px
+  color #717171
+  font-weight 100
+  font-size 14px
+  margin-bottom 10px
+
+.button-wrapper 
+  margin-top 60px
+
+.company-name
+  color color-graphiti-red
+  
+.input-label
+  color color-gpt-darkgrey
+  font-size 14px
+  line-height 25px
+  font-weight 100
+  margin-top 1em
+
+.inp-label-blue
+  @extend .input-label
+  color color-graphiti-red
+
+.text-intro
+  font-size 28px
+
+.text-sub-intro
+   font-weight 100
+   color #333
+   margin-top 15px 
+  
+.inp-field-gpt-disabled
+  @extend .inp-field-gpt
+  color #91969a
+
+input[type=radio],
+input[type=checkbox] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+    
+input[type=radio] ~ label:before,
+input[type=checkbox] ~ label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f1db";
+    letter-spacing: 10px;
+    font-size: 1.2em;
+    color: color-graphiti-red;
+    width: 1.4em;
+}
+
+input[type=radio]:checked ~ label:before,
+input[type=checkbox]:checked ~ label:before  {
+    content: "\f00c";
+    font-size: 1.2em;
+    color: color-graphiti-red;
+    letter-spacing: 5px;
+}
+input[type=checkbox] ~ label:before {        
+    content: "\f096";
+}
+input[type=checkbox]:checked ~ label:before {
+    content: "\f046";        
+    color: color-graphiti-red;
+}
+input[type=radio]:focus ~ label:before,
+input[type=checkbox]:focus ~ label:before,
+input[type=radio]:focus ~ label,
+input[type=checkbox]:focus ~ label
+{                
+    color: color-graphiti-red;
+}
+
+.continueWithWorkEmail
+  font-weight 400
+  font-size rem-calc(12)
+  color #888
+  margin-top rem-calc(20)
+  >span
+    text-decoration underline
+    cursor pointer
+
+.hr
+  height: 0;
+  border: none;
+  border-top: 1px solid #eee;
+  margin-top: 20px;

@@ -1,0 +1,137 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../styles/settings'
+
+body
+  overflow hidden
+  font-family font-main
+
+.main-wrapper
+  height 100vh
+  margin 0 auto
+  padding 0
+  display flex
+  overflow hidden
+  flex 1
+
+.sidebar
+  width 210px
+  min-height rem-calc(700)
+  display flex
+  box-shadow rgba(0, 0, 0, 0.04) -1px 0px 2px inset
+  flex-direction column
+  background discovery-sidebar-bg
+  color discovery-sidebar-font-color
+
+.main-container
+  flex-direction column
+  display flex
+  flex 1
+  .search
+    width auto
+    height 15vh
+  .assets
+    width auto
+    height 85vh
+
+.team-profile
+  border 1px solid #e8e8e8
+  height rem-calc(200)
+  margin rem-calc(10)
+  width 80%
+  margin-left 10%
+  .cover-image
+    height 70%
+    width 100%
+    background-color rgba(0,0,0,0.65)
+    display flex
+    align-items flex-end
+    background-image url('../../images/techteam2.jpg')
+    background-size cover
+    background-position-y -61px
+    h5
+      color #fff
+      font-size rem-calc(14)
+      font-weight 400
+      margin rem-calc(10) rem-calc(25)
+
+
+
+.new-asset-buttons
+  display flex
+  flex-flow column
+  justify-content center
+  align-items center
+  height 100%
+  .row:first-child
+    flex-flow column
+    justify-content center
+    margin-bottom rem-calc(56)
+  .row
+    display flex
+    align-items center
+    margin-bottom rem-calc(25)
+
+.label-lg
+  font-weight bold
+  font-size 32px
+  color #444
+
+.label-sm
+  font-weight 400
+  font-size 16px
+  color #777
+  margin-top rem-calc(10)
+
+.image-btn
+  padding rem-calc(32)
+  border-radius rem-calc(8)
+  cursor pointer
+  opacity .6
+  transition all 0.25s ease-in-out
+  background-color #f26450
+  margin-right rem-calc(25)
+  box-shadow rgba(170, 126, 68, .85) 0px 1px 2px
+  position relative
+  // box-shadow rgba(0,0,0,0.25) 0px 1px 2px
+  &.active
+    opacity 1
+  &:hover
+    opacity .8
+    box-shadow rgba(170, 126, 68, 1) 0px 1px 2px
+  .image
+    width rem-calc(64)
+    height rem-calc(64)
+    background-size cover
+    &.sql
+      background-image url('../../images/asset_code_white.png')
+    &.dataset
+      background-image url('../../images/asset_dataset_white.png')
+    &.chart
+      background-image url('../../images/asset_chart_white.png')
+    &.dashboard
+      background-image url('../../images/asset_dashboard_white.png')
+  .icon-circle
+    position absolute
+    bottom 0
+    right 0
+    width rem-calc(24)
+    height rem-calc(24)
+    border-radius rem-calc(50)
+    background-color #777
+    color #fff
+    display flex
+    align-items center
+    justify-content center
+    text-align center
+    right rem-calc(-6)
+    bottom rem-calc(-6)
+    font-size rem-calc(20)
+    line-height 3.4
+    padding-left 1px
+
+.loader
+  display flex
+  height 100%
+  align-items center
+  justify-content center

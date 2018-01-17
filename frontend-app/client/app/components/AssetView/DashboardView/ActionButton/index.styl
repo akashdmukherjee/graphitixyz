@@ -1,0 +1,98 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+@import '../../../../styles/settings'
+
+ul.ActionButton {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  position: fixed;
+  bottom: rem-calc(10);
+  right: rem-calc(10);
+  z-index: 9999;
+  &:hover {
+    li {
+      opacity: 1;
+      transform: scale(1);
+    }
+    li:nth-child(5) {
+      box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+      i {
+        opacity: 1;
+        transform: rotate(0deg);
+      }
+      span {
+        opacity: 0;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+ul.ActionButton li {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.08s ease-out;
+  transform: scale(0.5);
+  &:hover {
+    box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
+  }
+  &:nth-child(1) {
+    background: #00A388;
+    transition-delay: 160ms;
+    &:hover {
+      transition-delay: 0;
+    }
+  }
+  &:nth-child(2) {
+    background: #F2B33D;
+    transition-delay: 120ms;
+    &:hover {
+      transition-delay: 0;
+    }
+  }
+  &:nth-child(3) {
+    background: #79BD8F;
+    transition-delay: 80ms;
+    &:hover {
+      transition-delay: 0;
+    }
+  }
+  &:nth-child(4) {
+    background: color-main-contrast-light2;
+    width: 60px;
+    height: 60px;
+    line-height: 55px;
+    margin-left: -10px;
+    opacity: 1;
+    transform: scale(1);
+    font-size: 40px;
+    position: relative;
+    i {
+      opacity: 0;
+      transform: rotate(-90deg);
+      font-size: 30px;
+      margin: 15px 0 0 -13px;
+    }
+    i,
+    span {
+      position: absolute;
+      transition: all 0.2s ease-out;
+    }
+    span {
+      margin-left: -11.5px;
+      margin-top: 3px;
+    }
+  }
+}
+

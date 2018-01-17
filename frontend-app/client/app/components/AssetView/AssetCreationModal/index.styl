@@ -1,0 +1,108 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+color-main-contrast-light = #F3B562
+color-graphiti-orange = #F3B562
+color-main-contrast-light2 = #F1797A
+color-graphiti-red = #F26450
+color-gpt-red-light-1 = #ff8371
+color-gpt-red-dark-1 = #da5a48
+color-gpt-blue = #0fa2e2
+color-gpt-blue-dark-1 = #0d91ca
+color-gpt-label-blue-dark = #5692ad
+color-gpt-darkgrey = #717171
+color-gpt-purple = #615dae
+
+.AssetCreationModal-wrapper
+  height 91%
+  overflow hidden
+
+.fixed-layer
+  background-color rgba(0,0,0,0.25)
+  overflow hidden
+  position fixed
+  top 0
+  left 0
+  z-index 1
+  width 100%
+  height 100%
+
+.btn
+  margin 0
+  width rem-calc(400)
+  height rem-calc(300)
+  border 1px solid #eee
+  border-radius rem-calc(4)
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  margin rem-calc(5)
+  cursor pointer
+  transition all 0.25s ease-in-out
+  &:hover
+    border-color color-graphiti-red
+    .image
+      &.file
+        background-image url('../../../images/file_red.png')
+      &.sql
+        background-image url('../../../images/db_red.png')
+      &.csv
+        background-image url('../../../images/csv_red.png')
+      &.xls
+        background-image url('../../../images/excel_red.png')
+      &.drive
+        background-image url('../../../images/drive_red.png')
+
+.SourceSelector
+  height 100%
+  .selector-btns
+    display flex
+    height 100%
+    flex 1
+    align-items center
+    justify-content center
+  .upload-btns
+    display flex
+    height 100%
+    flex 1
+    align-items center
+    justify-content center
+    .upload-btn
+      @extend .btn
+      width rem-calc(300)
+      height rem-calc(250)
+      position relative
+      .uploader
+        width 100%
+        height 100%
+        position absolute
+        input
+          display none
+
+.image
+  width rem-calc(128)
+  height rem-calc(128)
+  background-size contain
+  transition all 0.25s ease-in-out
+  &.file
+    background-image url('../../../images/file_grey.png')
+  &.sql
+    background-image url('../../../images/db_grey.png')
+  &.csv
+    background-image url('../../../images/csv_grey.png')
+  &.xls
+    background-image url('../../../images/excel_grey.png')
+  &.drive
+    background-image url('../../../images/drive_grey.png')
+
+.btn-text
+  font-size rem-calc(18)
+  font-weight 400
+  color #777
+  text-transform uppercase
+  margin-top rem-calc(20)
+
+.modal-content
+  height 100%
+  overflow hidden

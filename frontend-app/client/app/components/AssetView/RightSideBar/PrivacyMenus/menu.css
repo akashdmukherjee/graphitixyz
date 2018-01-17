@@ -1,0 +1,68 @@
+.PrivacyMenu {
+  position: relative;
+  text-align: left;
+  transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+  cursor: pointer;
+  display: flex;
+  padding: 10px;
+}
+
+.PrivacyMenu .icons {
+  display: flex;
+  margin-right: 10px;
+}
+
+.PrivacyMenu .icons span i {
+  color: #BEBFC2;
+}
+
+.PrivacyMenu .icons span.type i {
+  color: #888;
+  font-size: 14px;
+}
+
+.PrivacyMenu .description {
+
+}
+
+.PrivacyMenu .description .text {
+  color: #444444;
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+  border: none;
+}
+
+.PrivacyMenu .description .subtext {
+  color: #777777;
+  font-size: 11px;
+  font-weight: 300;
+  display: block;
+  border: none;
+}
+
+.PrivacyMenu:hover {
+  background-color: #ececec;
+}
+
+.PrivacyMenu.btn:hover {
+  background-color: #f26450;
+}
+.PrivacyMenu.btn:hover > a {
+  border: none!important;
+}
+
+.PrivacyMenu > ul.PrivacyMenus {
+  position: absolute;
+  transition: all 1.9s;
+  visibility: hidden;
+  transition: visibility 0s, opacity 1.5s linear;
+}
+
+.PrivacyMenu:hover > ul.PrivacyMenus {
+  left: 100%;
+  top: 0;
+  visibility: visible;
+}
+
+

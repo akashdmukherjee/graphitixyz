@@ -1,0 +1,43 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/custom'
+@import '../../../styles/settings'
+
+normal-color = rgba(80, 80, 80, 0.55)
+active-focus-color = rgba(80, 80, 80, 0.77)
+
+action-mode-width = 65px
+.fnb-main-wrapper
+  align-self center
+  height 100%
+  .action-modes
+    align-self center
+    display flex
+    flex 1
+    height 100%
+    align-items center
+    list-style none
+    li
+      text-align center
+      width rem-calc(action-mode-width)
+      height 100%
+      &:hover
+        a
+          color active-focus-color
+      a
+        display block
+        color normal-color
+        margin 0 auto
+        width rem-calc(action-mode-width)
+        height rem-calc(navbar-height)
+        line-height rem-calc(navbar-height)
+        outline none
+        i
+          margin 0 auto
+          font-size rem-calc(24)
+        &:active
+          , &:focus
+            border-top rem-calc(3) solid color-graphiti-orange
+            line-height rem-calc(navbar-height - 6px)
+            i
+              color color-graphiti-orange

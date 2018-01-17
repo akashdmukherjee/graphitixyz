@@ -1,0 +1,32 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/custom'
+@import '../../../styles/settings'
+
+button-margin = 40px
+border-color = #e5e5e5
+// border-color = #ccc
+.button
+  width  "calc(100% - %s)" % button-margin
+  padding rem-calc(10) 0
+  margin 0 rem-calc(30)
+  background-color #fff
+  margin-top rem-calc(40)
+  color #f26450
+  align-self center
+  display inline-block
+  text-align center
+  white-space nowrap
+  vertical-align middle
+  cursor pointer
+  user-select none
+  background-image none
+  border none
+  border-radius rem-calc(2)
+  outline none
+  transition border 0.25s linear, color 0.25s linear, background-color 0.25s linear
+  border-bottom rem-calc(3) solid border-color
+  font-size rem-calc(12)
+  &:hover
+    background-color border-color
+    // text-shadow 0px 1px 0px rgba(245, 245, 245, 0.6)

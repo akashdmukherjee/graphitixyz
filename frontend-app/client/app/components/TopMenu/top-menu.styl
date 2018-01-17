@@ -1,0 +1,48 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+@import '../../styles/settings'
+
+.static-top-menu
+  height 40px
+  line-height 40px
+  overflow hidden
+  width 100%
+  background-color color-graphiti-orange
+  box-shadow 0 rem-calc(2) rem-calc(3) rgba(0, 0, 0, .05), 0 rem-calc(1) 0 rgba(0, 0, 0, .05)
+  z-index 10
+  position relative
+  grid()
+  .menu-column
+    cell(1, 3, g:0)
+    &.text-center
+      text-align center
+    &.text-right
+      text-align right
+
+.menu-button
+  background-color transparent
+  border none
+  outline none
+  font-size rem-calc(18)
+  cursor pointer
+  padding rem-calc(5)
+  color color-main-light
+  vertical-align middle
+  transition .3s color
+  &:hover
+    color color-main-light
+  &::before
+    vertical-align middle
+
+.menu-button-black
+  composes menu-button
+  color color-menu-top-icons
+  &:hover
+    color color-main-dark
+
+.slide-switcher,
+.grid-size-switcher
+  display inline-block
+.slide-switcher
+  color color-main-light

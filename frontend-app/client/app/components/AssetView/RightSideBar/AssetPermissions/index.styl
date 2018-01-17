@@ -1,0 +1,137 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../../styles/settings'
+
+.permissions-wrapper
+  position absolute
+  width 100%
+  height 100%
+  top 0
+  left 0
+  right 0
+  bottom 0
+  background-color #fff
+  z-index 9999
+
+.permissions-wrapper-show
+  @extends .permissions-wrapper
+  display block
+
+.permissions-wrapper-hide
+  display none
+
+.container
+  display flex
+  flex-flow column
+  justify-content center
+  align-items center
+  flex 1
+  width 100%
+  .content
+    width 60vw
+
+.header
+  padding rem-calc(10)
+  .asset-name
+    font-size rem-calc(16)
+    font-weight 300
+    color #888
+    padding-top rem-calc(40)
+    padding-left rem-calc(50)
+
+.close
+  position absolute
+  top rem-calc(25)
+  right rem-calc(50)
+  display flex
+  flex-flow column
+  justify-content center
+  align-items center
+  cursor pointer
+  color #777
+  padding-right rem-calc(50)
+  i
+    font-size rem-calc(32)
+  span
+    line-height rem-calc(15)
+    font-size rem-calc(13)
+  &:hover
+    color #f26450
+
+.content-header
+  padding rem-calc(40) 0
+  display flex
+  flex-flow row
+  justify-content space-between
+  align-items center
+  h5
+    font-size rem-calc(32)
+    font-weight 600
+
+.save-btn
+  outline none
+  border none
+  padding 0 rem-calc(10)
+  border-radius rem-calc(3)
+  font-size rem-calc(14)
+  height rem-calc(35)
+  cursor pointer
+  color #fff
+
+.save-btn-active
+  @extends .save-btn
+  background-color #f26450
+
+.save-btn-disabled
+  @extends .save-btn
+  background-color rgba(242, 100, 80, 0.65)
+
+.check-permissions
+  display flex
+  flex-flow row
+  width 100%
+  align-items center
+  margin rem-calc(10) 0
+  border-top 1px solid #ddd
+  padding-top rem-calc(20)
+  input
+    outline none
+    border 1px solid #ddd
+    font-size rem-calc(13)
+    padding rem-calc(8) rem-calc(5)
+    width 100%
+    border-radius rem-calc(3)
+  button
+    outline none
+    width rem-calc(140)
+    padding rem-calc(10) 0
+    border none
+    border-radius rem-calc(3)
+    background-color #f26450
+    color #fff
+    margin-left rem-calc(10)
+
+.asset-permissions-wrapper
+  margin 0
+  width 100%
+  display flex
+  flex-flow column
+.permission-wrapper
+  display flex
+  flex-flow column
+  .header-admins
+    margin-bottom rem-calc(10)
+  .header-authors
+  &, .header-followers
+    margin-bottom rem-calc(10)
+    margin-top rem-calc(5)
+  h5
+    font-size rem-calc(15)
+    font-weight 400
+    color #444
+  .permission-tags
+    padding rem-calc(5) rem-calc(8)
+    border 1px solid #ddd
+    border-radius rem-calc(4)
+    height rem-calc(80)
+    overflow auto

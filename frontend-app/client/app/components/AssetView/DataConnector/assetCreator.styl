@@ -1,0 +1,96 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/settings'
+
+.asset-creator-wrapper
+  display block
+  min-height rem-calc(450)
+  height 80vh
+  h5
+    font-weight 500
+    font-size rem-calc(14)
+    color #444444
+  .header
+    display block
+    text-align right
+    button
+      margin rem-calc(10) 0
+    input
+      width 100%
+      outline none
+      padding rem-calc(8) rem-calc(5)
+      border-radius rem-calc(3)
+      box-shadow none
+      border 1px solid rgba(0,0,0,0.15)
+      transition border .25s linear,color .25s linear,background-color .25s linear
+      font-size rem-calc(14)
+      &:focus
+        border 1px solid rgba(0,0,0,0)
+        background-color #f5f5f5
+    button
+        outline none
+        border none
+        border-radius 3px
+        padding rem-calc(8) rem-calc(16)
+        cursor pointer
+        font-size rem-calc(14)
+        border-radius rem-calc(3)
+        color #fff
+        background-color #f26450
+    h5
+      align-self center
+      span
+        color #666666
+        font-weight 400
+        font-size rem-calc(13)
+  .body
+    display block
+    h5
+      padding rem-calc(10)
+  .table-list
+    width rem-calc(150)
+    border-right 1px solid rgba(0,0,0,0.2)
+    float left
+    ul
+      list-style none
+      max-height rem-calc(400)
+      overflow-y scroll
+      li
+        cursor pointer
+        transition border 0.25s linear, color 0.25s linear, background-color 0.25s linear
+        border-bottom 1px solid rgba(0,0,0,0.1)
+        h5
+          font-weight 400
+          font-size rem-calc(13)
+          color #666666
+          i
+            margin-right rem-calc(10)
+        &:hover
+          background-color #ececec
+          >h5
+            color #444
+  .asset-editor
+    width 100%
+    .header-btn-wrapper
+      display flex
+      justify-content space-between
+      margin rem-calc(10)
+      >button
+        outline none
+        border none
+        padding rem-calc(1) rem-calc(20)
+        cursor pointer
+        font-size rem-calc(14)
+        border-radius rem-calc(3)
+        color #fff
+        background-color #f26450
+    .data-preview
+      display flex
+      flex 1
+      margin rem-calc(10)
+
+.sql-editor
+  display inline-block
+  border 1px solid crimson
+  &:after
+    clear both

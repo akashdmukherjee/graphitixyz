@@ -1,0 +1,49 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../../styles/settings'
+
+.input
+  outline none
+  padding rem-calc(8) rem-calc(5)
+  border 1px solid #ddd
+  border-radius  rem-calc(3)
+  font-size rem-calc(13)
+
+.team-management-wrapper
+  margin 0
+  width 100%
+  display flex
+  flex-flow column
+  input
+    @extend .input
+    margin-bottom rem-calc(20)
+
+.team-wrapper
+  display flex
+  flex-flow column
+  .header-teams
+    margin-bottom rem-calc(10)
+  h5
+    font-size rem-calc(15)
+    font-weight 400
+    color #444
+  .team-tags
+    padding rem-calc(5) rem-calc(8)
+    border 1px solid #ddd
+    border-radius rem-calc(4)
+    height rem-calc(80)
+    overflow auto
+
+.input-dropdown
+  position relative
+  margin-bottom rem-calc(10)
+  display inline-block
+  input
+    outline none
+    width 100%
+    padding rem-calc(5)
+    border-radius rem-calc(3)
+    box-shadow none
+    border none
+    font-size rem-calc(13)
+    font-weight 400

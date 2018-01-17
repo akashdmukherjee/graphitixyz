@@ -1,0 +1,44 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../../styles/animations'
+
+.filter-tag
+  margin 0
+  width 100%
+  .submenu
+    margin 0
+    margin-left rem-calc(185)
+    position absolute
+    left rem-calc(2)
+    top 0
+    background #fff
+    box-shadow 0 1px 9px 1px rgba(0,0,0,.12), 0 1px 3px 0 hsla(0,0%,88%,.25)
+    @extend .animation-fade-in
+
+.triangle
+  position relative
+  top rem-calc(-27)
+  left rem-calc(20)
+  &:after,
+  &:before {
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+  }
+
+  &:before {
+    border-left-color: green;
+    margin-left: -11px;
+    border-width: 11px;
+    right: 0;
+  }
+
+  &:after {
+    border-left-color: blue;
+    border-width: 10px;
+    margin-left: -10px;
+    right: 0.09rem;
+  }

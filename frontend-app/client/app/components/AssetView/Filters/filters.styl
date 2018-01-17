@@ -1,0 +1,29 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/settings'
+
+.filters-wrapper
+  display flex
+  justify-content flex-start
+  // padding rem-calc(2) rem-calc(10) rem-calc(8) rem-calc(10)
+  // box-shadow -1px 0px 3px 0px rgba(0, 0, 0, 0.35)
+  margin rem-calc(10) 0
+  padding 0 rem-calc(10)
+  height rem-calc(26)
+
+.filtersets-wrapper
+  display flex
+  width rem-calc(250)
+  height 100%
+  margin-right rem-calc(40)
+  .filtersets
+    position relative
+    width 100%
+  .filterset-list
+    list-style none
+    position absolute
+    border 1px solid #ddd
+  
+.action-btns
+  display flex
+  height 100%

@@ -1,0 +1,63 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+color-main-contrast-light = #F3B562
+color-graphiti-orange = #F3B562
+color-main-contrast-light2 = #F1797A
+color-graphiti-red = #F26450
+color-gpt-red-light-1 = #ff8371
+color-gpt-red-dark-1 = #da5a48
+color-gpt-blue = #0fa2e2
+color-gpt-blue-dark-1 = #0d91ca
+color-gpt-label-blue-dark = #5692ad
+color-gpt-darkgrey = #717171
+color-gpt-purple = #615dae
+.DataAssetView-wrapper
+  height 100%
+
+.sql-editor-wrapper
+  width 100%
+  height 60%
+
+.sql-editor-wrapper-sidebar-closed
+  @extend .sql-editor-wrapper
+  width 80%
+
+preview-bg-color=#b3b3b3
+.sql-preview-wrapper
+  height 100%
+  width 100%
+  position absolute
+  z-index -1
+  margin-top rem-calc(42)
+  transition all 0.25s ease-in-out
+  background-color rgba(0,0,0,0)
+  &.expand
+    background-color rgba(0,0,0,0.15)
+    z-index 1
+  .wrapper
+    position relative
+    height 100%
+    width 100%
+    .line
+      background-color #eee
+      position absolute
+      right rem-calc(64)
+      height 0
+      transition all 0.25s ease-in-out
+      &.expand
+        height 50%
+        width 2px
+    .sql-preview
+      top 50%
+      width 98%
+      height 0
+      border-left none
+      border-right none
+      position absolute
+      background-color #fff
+      margin 0 rem-calc(10)
+      border-radius rem-calc(6)
+      transition all 0.25s ease-in-out
+      &.expand
+        height 42%

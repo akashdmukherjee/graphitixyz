@@ -1,0 +1,56 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+.note-modal-wrapper
+  margin 0
+  .add-btn-wrapper
+    width 100%
+    text-align right
+    button
+      outline none
+      border-radius rem-calc(3)
+      background-color #f26450
+      border none
+      padding rem-calc(8) rem-calc(10)
+      color #fff
+      cursor pointer
+      &:hover
+        background-color #da5a48
+  .note-editables
+    margin 0
+    div
+      margin-bottom rem-calc(10) 
+      h5
+        font-size rem-calc(11)
+        font-weight 400
+        color #555
+        text-transform uppercase
+    textarea
+      width 100%
+      resize none
+      outline none
+      border 1px solid #ddd
+      padding rem-calc(5)
+      font-size rem-calc(14)
+      color #444
+      border-radius rem-calc(3)
+      margin-top rem-calc(5)
+    .note-input
+      overflow auto
+  .notes
+    margin-top rem-calc(15)
+    max-height rem-calc(300)
+    overflow auto
+
+.note
+  padding rem-calc(15)
+  width 100%
+  margin-bottom rem-calc(15)
+  border 1px solid #eeeeee
+  border-left 3px solid #f26450
+  // border-left 3px solid #615dae
+  p
+    font-size rem-calc(14)
+    font-weight 400
+    word-break break-all
+    line-height rem-calc(25)

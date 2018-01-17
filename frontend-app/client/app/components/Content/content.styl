@@ -1,0 +1,134 @@
+
+@import '../../styles/settings'
+
+body
+  overflow hidden
+  font-family font-main
+
+.main-container
+  height: 100%
+  margin 0 auto
+  padding 0
+
+.static-top-menu
+  height 40px
+  line-height 40px
+  overflow hidden
+  width 100%
+  background-color color-graphiti-orange
+  box-shadow 0 rem-calc(2) rem-calc(3) rgba(0, 0, 0, .05), 0 rem-calc(1) 0 rgba(0, 0, 0, .05)
+  z-index 10
+  position relative
+  color white
+  font-weight bold
+  grid()
+  .menu-column
+    cell(1, 3, g:0)
+    &.text-center
+      text-align center
+    &.text-right
+      text-align right
+
+.logo
+    float left
+    position relative
+    margin-left 15px
+    font-size 1.7em
+    font-family Arial
+
+.searchbar
+    float left
+    position relative
+    width 700px
+    height 28px
+    margin-top 6px
+    margin-left 150px
+    box-sizing border-box
+    border none
+    border-radius 2px
+    font-size 14px
+    background-color #f09925
+    background-image url('/components/Content/searchicon.png');
+    background-position 10px 10px
+    background-repeat no-repeat
+    padding 12px 20px 12px 40px
+    -webkit-transition width 0.4s ease-in-out
+    transition width 0.4s ease-in-out
+
+
+
+.searchbar::-webkit-input-placeholder
+   color #fae4c4
+
+.searchbar:-moz-placeholder /* Firefox 18- */
+   color #fae4c4
+
+.searchbar::-moz-placeholder /* Firefox 19+ */
+   color #fae4c4
+
+.searchbar:-ms-input-placeholder
+   color #fae4c4
+
+.searchbar:focus::-webkit-input-placeholder
+   color #3C3C3C
+
+.searchbar:focus:-moz-placeholder
+   color #3C3C3C
+
+.searchbar:focus::-moz-placeholder
+   color #3C3C3C
+
+.searchbar:focus:-ms-input-placeholder
+   color #3C3C3C
+
+
+.searchbar:focus
+    background-color #ffffff
+    outline none
+
+.quickfilters
+  position relative
+  display block
+  font-size 0.8em
+  color #313131
+  font-family proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif
+  padding .32em 0
+  transition color .1s linear
+  cursor pointer
+
+.quickfilters:hover
+  color color-graphiti-red
+
+
+.content-navigation-quickfilters
+  min-height 100vh
+  height auto
+  float left
+  position relative
+  margin-left 30px
+  margin-top 30px
+
+.content-navigation-main-area
+  min-height 200vh
+  height auto
+  float left
+  position relative
+  margin-left 50vh
+  background-color #CBF9DA
+
+.datastory-item-container
+  width 700px
+  height 100px
+  display block
+  position relative
+  background-color #ffffff
+  position relative
+  margin-left 50vh
+  background-color #CBF9DA
+  border 1px solid #dcdce0
+
+
+
+.main-menu
+  border rem-calc(1) solid color-main-contrast
+  margin-bottom rem-calc(5)

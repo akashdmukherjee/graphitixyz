@@ -1,0 +1,78 @@
+.SingleDatePicker {
+  width: 100%;
+}
+
+.SingleDatePicker .SingleDatePickerInput,
+.DateRangePicker .DateRangePickerInput {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.SingleDatePicker .DateInput {
+  padding: 0;
+  font-size: 14px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.SingleDatePicker .DateInput__input {
+  width: 100%;
+}
+
+.SingleDatePicker .DateInput__display-text--focused, 
+.DateRangePicker .DateInput__display-text--focused {
+  background-color: #fff;
+  color: #f26450;
+  border-color: transparent;
+  border-radius: 6px;
+}
+
+.DateInput--with-caret:before {
+  top: 39px;
+}
+
+.DateInput--with-caret:after {
+  top: 40px;
+}
+
+.SingleDatePicker .SingleDatePicker__picker,
+.DateRangePicker .DateRangePicker__picker {
+  top: 50px;
+}
+
+.DateRangePicker .DateRangePickerInput .DateInput {
+  width: 45%;
+  padding: 0;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.DateRangePickerInput__arrow svg {
+  width: 18px;
+}
+
+.CalendarDay--selected, .CalendarDay--selected-end, .CalendarDay--selected-start {
+  background-color: #f26450;
+  border: 1px double #f26450;
+  color: #fff;
+}
+
+.CalendarDay--selected-span {
+  background-color: #ff8371;
+  border: 1px double #f26450;
+}
+
+.CalendarDay--selected-end:active, .CalendarDay--selected-start:active, .CalendarDay--selected:active {
+  background-color: #f26450;
+}
+
+.CalendarDay--selected-span.CalendarDay--hovered, .CalendarDay--selected-span:active {
+  background-color: #da5a48;
+  border: 1px double #da5a48;
+}
+
+.CalendarDay--hovered-span, .CalendarDay--after-hovered-start {
+  background-color: #ff8371;
+  border: 1px double #f26450;
+  color: #fff;
+}

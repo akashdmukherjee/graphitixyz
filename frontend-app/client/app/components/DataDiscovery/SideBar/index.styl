@@ -1,0 +1,163 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/settings'
+
+active-bg-color=#F3B562
+active-text-color=#413f3c
+text-normal-color=#fff
+text-hover-color=rgba(0,0,0,0.06)
+text-header-normal-color=#444
+text-alt-normal-color=#777
+
+// text-normal-color=#555
+// text-hover-color=#333
+
+.sidebar-wrapper
+  flex 1
+  display flex
+  flex-direction column
+  .section
+    margin-top rem-calc(15)
+    width 100%
+    float left
+    height rem-calc(130)
+    overflow-y scroll
+    .tags
+      padding rem-calc(10)
+    .header
+      font-weight 400
+      font-size rem-calc(13)
+      padding-left rem-calc(10)
+      i
+        padding 0 rem-calc(5)
+  .footer-wrapper
+    position absolute
+    bottom 0
+    width 208px
+    .footer
+      width 100%
+      outline none
+      border none
+      height rem-calc(50)
+      background-color transparent
+      cursor pointer
+      text-align center
+      float left
+      color #555  
+      &:hover
+        background-color text-hover-color
+        color text-normal-color
+        i
+          transition opacity .1s ease-out 0s,color .1s ease-out 0s,left .2s ease-in-out .1s
+          left 20px
+        span
+          display inline-block
+          opacity 1
+          transition all .25s cubic-bezier(.16,.85,.5,1) .25s
+      i
+        opacity 1
+        transition opacity .1s ease-out 0s,color .1s ease-out 0s,left .1s ease-in-out 0s
+        position absolute
+        left 96px
+        top 18px
+        font-size 15px
+        color text-normal-color
+      span
+        opacity 0
+        transition all .1s cubic-bezier(.16,.85,.5,1) 0s
+        position relative
+        font-size rem-calc(14)
+
+.icon-tabs
+  display flex
+  flex-direction row
+  justify-content space-around
+  margin-top rem-calc(10)
+  span
+    i
+      color rgba(80, 80, 80, 0.64)
+      font-size rem-calc(24)
+      cursor pointer
+    i:hover
+      &, i:active
+        &, i:focus
+          color #f26450
+
+.action-menus
+  width 100%
+  list-style none
+  margin-top rem-calc(20)
+  a
+    font-size rem-calc(13)
+    padding rem-calc(5) rem-calc(10)
+    cursor pointer
+    display block
+    transition border 0.25s linear, color 0.25s linear, background-color 0.25s linear      
+    &:hover
+      background-color text-hover-color
+      color text-normal
+      transition border 0.25s linear, color 0.25s linear, background-color 0.25s linear
+    i 
+      padding 0 rem-calc(5)
+    &:focus
+      background-color #f26450
+      color #fff
+      outline none
+
+.new-asset-buttons
+  display flex
+  flex-flow column
+  justify-content center
+  margin-top rem-calc(10)
+  margin-left rem-calc(15)
+  .row:first-child
+    margin-bottom rem-calc(15)
+  .row
+    display flex
+
+.image-btn
+  border-radius rem-calc(3)
+  cursor pointer
+  opacity .65
+  transition all 0.25s ease-in-out
+  background-color #f26450
+  margin-right rem-calc(15)
+  box-shadow rgba(170, 126, 68, .85) 0px 1px 2px
+  position relative
+  // box-shadow rgba(0,0,0,0.25) 0px 1px 2px
+  &.active
+    opacity 1
+  &:hover
+    opacity 0.8
+    box-shadow rgba(170, 126, 68, 1) 0px 1px 2px
+  .image
+    width rem-calc(24)
+    height rem-calc(24)
+    margin rem-calc(8)
+    background-size cover
+    &.sql
+      background-image url('../../../images/asset_code_white.png')
+    &.dataset
+      background-image url('../../../images/asset_dataset_white.png')
+    &.chart
+      background-image url('../../../images/asset_chart_white.png')
+    &.dashboard
+      background-image url('../../../images/asset_dashboard_white.png')
+  .icon-circle
+    position absolute
+    bottom 0
+    right 0
+    width rem-calc(12)
+    height rem-calc(12)
+    border-radius rem-calc(50)
+    background-color #777
+    color #fff
+    display flex
+    align-items center
+    justify-content center
+    text-align center
+    right rem-calc(-6)
+    bottom rem-calc(-6)
+    font-size rem-calc(14)
+    line-height 3.2
+    padding-left 1px

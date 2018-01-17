@@ -1,0 +1,42 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+.lists-wrapper
+  overflow-y scroll
+  height 100%
+
+.list
+  display flex
+  flex 1
+  flex-direction column
+
+.list-header
+  display flex
+  flex-direction row
+  height 25px
+  justify-content space-between
+  align-items center
+  margin 10px
+  h3
+    font-size rem-calc(16)
+    font-weight 600
+    color #f26450
+    text-transform uppercase
+
+.list-body
+  display flex
+  flex-direction row
+  justify-content space-around
+  flex 1
+  margin-bottom 20px
+
+.list-body-single
+  @extend .list-body
+  justify-content flex-start
+  padding-left rem-calc(10)
+
+.show-all
+  padding 5px 10px
+  border 1px solid #677999
+  border-radius 25px
+  cursor pointer

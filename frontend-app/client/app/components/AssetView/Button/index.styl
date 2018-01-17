@@ -1,0 +1,180 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/settings'
+
+button-margin = 40px
+border-color = #e5e5e5
+// border-color = #ccc
+.button
+  width  auto
+  padding rem-calc(7) rem-calc(10)
+  background-color #fff
+  color #f26450
+  display inline-block
+  text-align center
+  white-space nowrap
+  vertical-align middle
+  cursor pointer
+  user-select none
+  background-image none
+  border none
+  border-radius rem-calc(3)
+  outline none
+  transition border 0.25s linear, color 0.25s linear, background-color 0.25s linear
+  font-size rem-calc(12)
+
+// f7f8fa
+// 0.5
+// 71767a
+
+.btn-fav
+  @extend .button
+  background-color #fff
+  color color-graphiti-red
+  border 1px solid color-graphiti-red
+  &:hover
+    background-color #da5a48
+    color #fff
+
+.btn-fav-active
+  @extend .button
+  background-color color-graphiti-red
+  border 1px solid color-graphiti-red
+  color #fff
+  &:hover
+    background-color color-graphiti-red
+
+.btn-save-dataset
+  @extend .btn-fav-active
+  opacity 0.7
+  padding 0 rem-calc(10)
+  margin-left rem-calc(10)
+
+.btn-save-dataset-active
+  @extend .btn-fav-active
+  padding 0 rem-calc(10)
+  margin-left rem-calc(10)
+
+
+.btn-permissions
+  @extend .button
+  background-color #f7f8fa
+  border 1px solid rgba(0, 0, 0, 0.04)
+  color #71767a
+  &:hover
+    background-color #dfe0e2
+    
+.btn-share
+  @extend .btn-permissions
+  height 100%
+  padding 0 rem-calc(8)
+  background-color #fff
+  border none
+  color #444
+  height rem-calc(24)
+  font-size rem-calc(13)
+  font-weight 400
+  &:hover
+   background-color #e8e8e8
+  i 
+    margin-right 8px
+    font-size rem-calc(10)
+
+.btn-run
+  @extend .btn-share
+  color #00b8a9
+  i
+    margin-right rem-calc(6)
+    font-size rem-calc(12)
+
+.btn-versions
+  @extend .btn-share
+  border 1px sold transparent
+  margin-right rem-calc(10)
+  &:hover
+  i
+    margin-left rem-calc(8)
+    margin-right 0
+    color #b3b3b3
+
+.btn-copy
+  @extend .btn-permissions
+  i 
+    margin-right 0!important
+
+.btn-help
+  @extend .btn-permissions
+  width 100%
+  margin rem-calc(10)
+  i
+    margin-right rem-calc(10)
+
+.btn-faq
+  @extend .btn-help
+  margin-right 0
+
+.btn-notes
+  @extend .btn-help
+
+.btn-down
+  @extend .btn-permissions
+  height 100%
+  background-color #fff
+  line-height 1
+  border none!important
+  &:hover
+    background-color #e8e8e8
+  i
+    margin-top rem-calc(-3)
+    margin-right 0!important
+    font-size rem-calc(16)
+
+.btn-save
+  @extend .btn-down
+  position relative
+  span
+    position absolute
+    font-size 18px
+    font-weight bold
+    top -7px
+    right 5px
+    color #f26450
+
+.btn-privacy
+  @extend .btn-permissions
+  i
+    margin-right 0!important
+
+.btn-delete
+  @extend .btn-privacy
+  margin rem-calc(10)
+  margin-left 0
+
+.btn-related-assets
+  background #2d9cdb
+  font-weight 500
+  font-size rem-calc(14)
+  border none
+  font-family Open Sans,sans-serif
+  box-shadow 0px 2px 20px rgba(118, 109, 204,0.3)
+  text-transform uppercase
+  width 80%
+  padding rem-calc(8)
+  color #fff
+  margin rem-calc(10)
+  display inline-block
+  white-space nowrap
+  outline none
+  border-radius rem-calc(25)
+  transition border 0.25s linear, color 0.25s linear, background-color 0.25s linear
+  cursor pointer
+  i
+    margin-right rem-calc(10)
+  &:hover
+    background-color #238fcc
+
+.btn-save-asset
+  @extend .btn-related-assets
+  background-color #41c870
+  &:hover
+    background-color #36ba64

@@ -1,0 +1,106 @@
+.node,
+g {
+  cursor: pointer;
+}
+
+.overlay {
+  background-color: #ddd;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 9px;
+}
+
+.node text {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+
+.templink {
+  fill: none;
+  stroke: red;
+  stroke-width: 3px;
+}
+
+.ghostCircle.show {
+  display: block;
+}
+
+.ghostCircle,
+.activeDrag .ghostCircle {
+  display: none;
+}
+
+.tip {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+/*
+#child-info {
+  width: 100px;
+  height: 50px;
+  height: auto;
+  position: fixed;
+  padding: 10px;
+  display: none;
+  left: 40%;
+}
+#btn-add-child {} .control-bar {
+  min-height: 50px;
+  padding: 10px 0px;
+  background: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 3px 2px -2px rgba(200, 200, 200, 0.2);
+  color: #666;
+}
+.asset-title {
+  padding: 15px;
+  float: left;
+}
+.control-buttons {
+  float: right;
+  padding: 10px;
+}
+.control-buttons button {
+  border: none;
+  border-radius: 0px;
+  background: #fff;
+  color: #666;
+  height: 30px;
+  width: 30px;
+}
+.node {
+  cursor: pointer;
+}
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+.node text {
+  font: 12px sans-serif;
+}
+.link {
+  fill: none;
+  stroke: #85e0e0;
+  stroke-width: 2px;
+}
+.rightparent>rect {
+  display: none;
+}
+.leftparent>rect {
+  fill: #f1f1f1;
+  stroke: #ccc;
+  stroke-width: 2;
+}*/

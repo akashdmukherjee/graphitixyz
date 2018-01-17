@@ -1,0 +1,123 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+header-color = rgba(62, 62, 62, 0.88)
+
+.asset-wrapper
+  display flex
+  flex-direction column
+  flex 1
+  align-items stretch
+  justify-content space-between
+
+.asset-spacing
+  padding 0 10px
+  flex 1
+  display flex
+  justify-content space-between
+  align-items center
+  span
+    font-size rem-calc(14)
+  i
+      font-size rem-calc(18)
+  span i
+      font-size rem-calc(14)
+
+.asset-header
+  color #fff
+  flex 0.18
+  display flex
+  border-top-left-radius 3px
+  border-top-right-radius 3px
+  background-image url('../../../images/bg_effect_2.jpg')
+  background-size cover
+  i
+    align-self center
+
+.asset-body
+  flex 0.64
+  display flex
+  flex-direction column
+  justify-content space-between
+  align-items flex-start
+  margin 8px
+
+.asset-body-header
+  font-weight 400
+  font-size rem-calc(14)
+  color header-color
+
+.asset-footer
+  flex 0.18
+  display flex
+  align-items center
+  justify-content space-between
+  span
+    align-self center
+    i
+      margin 5px
+  .actions
+    margin-top 5px
+
+.icon
+  text-align center
+  vertical-align middle
+  font-size 14px
+  width 20px
+  height 20px
+  line-height 1.3em
+  cursor pointer
+
+.square-icon
+  @extend .icon
+  background-color rgba(195, 192, 192, 0.64)
+  border-radius 4px
+  color rgba(80, 80, 80, 0.64)
+
+.circle-icon
+  @extend .icon
+  border-radius 50%
+  border 1px solid rgba(80, 80, 80, 0.64)
+  color rgba(80, 80, 80, 0.44)
+
+.row
+  display flex
+  flex-direction row
+
+.column
+  display flex
+  flex-direction column
+
+.asset-body-preview-row
+  @extend .row
+  width 100%
+  justify-content space-between
+
+.asset-body-footer-column
+  @extend .column
+  justify-content space-between
+  font-size rem-calc(12)
+  font-weight 400
+  position relative
+  .tags
+    &, .authors
+      @extend .row
+      margin-top 5px
+  .authors
+    margin-bottom 25px
+    color header-color
+  .tags
+    position absolute
+    bottom rem-calc(-5)
+
+.preview-header
+  font-size rem-calc(12)
+  color grey
+  font-weight 400
+
+.preview-data
+  color darkgrey
+
+.authors-label 
+  color rgba(95, 86, 86, 0.82)
+  margin-right 5px

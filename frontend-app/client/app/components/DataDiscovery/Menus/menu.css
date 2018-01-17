@@ -1,0 +1,64 @@
+.NewAssetMenu {
+  position: relative;
+  text-align: left;
+  transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+  cursor: pointer;
+}
+
+.NewAssetMenu:hover {
+  background-color: #ececec;
+}
+
+.NewAssetMenu.btn:hover {
+  background-color: #f26450;
+}
+.NewAssetMenu.btn:hover > a {
+  border: none!important;
+}
+
+.NewAssetMenu > ul.NewAssetMenus {
+  position: absolute;
+  transition: all 1.9s;
+  visibility: hidden;
+  transition: visibility 0s, opacity 1.5s linear;
+}
+
+.NewAssetMenu:hover > ul.NewAssetMenus {
+  left: 100%;
+  top: 0;
+  visibility: visible;
+}
+
+.NewAssetMenu-link, .NewAssetMenu-file-input {
+  color: #777777;
+  font-size: 13px;
+  font-weight: 400;
+  display: block;
+  text-decoration: none;
+  padding: 0.625rem;
+  padding-right: 2.325rem;
+  border: none;
+}
+
+.NewAssetMenu-link-btn {
+  width: auto;
+  background-color: #f26450;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.325rem;
+  margin: 0.3rem;
+  border-radius: 3px;
+  cursor:  pointer;
+  border: none;
+}
+
+.NewAssetMenu-file-input {
+  position: relative;
+}
+
+.NewAssetMenu-file-input input {
+  display: none;
+}

@@ -1,0 +1,66 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+.Select-wrapper
+  margin 0
+  width rem-calc(150)
+  padding rem-calc(5) rem-calc(10)
+  border-radius rem-calc(3)
+  background-color #f5f5f5
+  position relative
+  .selector
+    display flex
+    flex-flow row
+    justify-content space-between
+    cursor pointer
+    h5
+      font-weight 400
+      font-size rem-calc(13)
+      color #333
+      text-overflow ellipsis
+      white-space nowrap
+      overflow hidden
+    i 
+      font-size rem-calc(13)
+      line-height rem-calc(20)
+
+.options
+  list-style none
+
+.options-show
+  @extend .options
+  display inline-block
+  transition 0.1s all ease-in
+  max-height rem-calc(400)
+  overflow-x hidden
+  overflow-y auto
+  position absolute
+  width 100%
+  border 1px solid #ddd
+  border-radius rem-calc(3)
+  background-color #fff
+  left 0
+  z-index 1
+  margin-top 5px
+  li
+    border-bottom 1px solid rgba(0,0,0,0.09)
+    padding rem-calc(8) rem-calc(10)
+    cursor pointer
+    width 100%
+    font-size rem-calc(13)
+    color #333
+    text-overflow ellipsis
+    white-space nowrap
+    overflow hidden
+    &:last-child
+      border-bottom none
+    &:hover
+      background-color #f26450
+      color #fff
+      
+
+.options-hide
+  display none
+  transition 0.1s all ease-out
+.option
+  margin 0

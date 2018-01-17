@@ -1,0 +1,67 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+color-graphiti-red=#f26450
+.SearchableInput-wrapper
+  position relative
+  margin-bottom rem-calc(10)
+  display inline-block
+  input
+    outline none
+    width 100%
+    padding rem-calc(5)
+    border-radius rem-calc(3)
+    box-shadow none
+    border none
+    font-size rem-calc(13)
+    font-weight 400
+
+.show-list
+  display block
+  list-style none
+  max-height rem-calc(150)
+  overflow-x hidden
+  overflow-y auto
+  position fixed
+  width rem-calc(150)
+  border 1px solid #ddd
+  border-top none
+  background-color #fff
+  z-index 999
+  li
+    border-bottom 1px solid rgba(0,0,0,0.09)
+    padding rem-calc(8) rem-calc(5)
+    padding-right 0
+    cursor pointer
+    width 100%
+    &:last-child
+      border-bottom none
+    h5
+      font-weight 400
+      text-overflow ellipsis
+      white-space nowrap
+      overflow hidden
+    .username
+      &,
+        .text
+        font-size rem-calc(14)
+        color #545454
+    .email
+      font-size rem-calc(12)
+      color #999999
+    &:hover
+      background-color color-graphiti-red
+      >h5
+        color #fff
+
+.hide-list
+  display none
+
+.show-list::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+.show-list::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}

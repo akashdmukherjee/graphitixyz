@@ -1,0 +1,27 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+.AddInputText-wrapper
+  display flex
+  input
+    outline none
+    flex 3
+    width 100%
+    padding rem-calc(5)
+    border-radius rem-calc(3)
+    box-shadow none
+    border 1px solid rgba(0,0,0,0.15)
+    border-right 1px solid transparent
+    transition border .25s linear,color .25s linear,background-color .25s linear
+    font-size rem-calc(13)
+    &:focus
+      border 1px solid rgba(0,0,0,0)
+      background-color #f5f5f5
+  button
+    flex 1
+    outline none
+    border none
+    background-color #f26450
+    color #fff
+    padding rem-calc(10)
+    border-radius rem-calc(3)

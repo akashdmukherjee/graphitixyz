@@ -1,0 +1,68 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+@import '../../styles/settings'
+
+.resizable-element
+    position relative
+    width 100%
+    height 100%
+.resizable-content
+    z-index 1
+    position relative
+    padding rem-calc(2)
+.resizable-border
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    border solid rem-calc(2) color-block-resize-border
+    z-index 0
+.resizable-left,
+.resizable-right,
+.resizable-bottom-left,
+.resizable-bottom-right,
+.resizable-top-left,
+.resizable-top-right,
+.resizable-bottom,
+.resizable-top
+    width rem-calc(10)
+    height rem-calc(10)
+    background-color color-block-resize-squareholder
+    position absolute
+    z-index 2
+.resizable-top,
+.resizable-bottom
+    left 50%
+    transform translateX(-50%)
+    cursor row-resize
+.resizable-top
+    top rem-calc(-4)
+.resizable-bottom
+    bottom rem-calc(-4)
+.resizable-top-left
+    top rem-calc(-4)
+    left rem-calc(-4)
+    cursor nwse-resize
+.resizable-top-right
+    top rem-calc(-4)
+    right rem-calc(-4)
+    cursor nesw-resize
+.resizable-left,
+.resizable-right
+    top 50%
+    transform translateY(-50%)
+    cursor col-resize
+.resizable-left
+    left rem-calc(-4)
+.resizable-right
+    right rem-calc(-4)
+.resizable-bottom-right
+    bottom rem-calc(-4)
+    right rem-calc(-4)
+    cursor nwse-resize
+.resizable-bottom-left
+    bottom rem-calc(-4)
+    left rem-calc(-4)
+    cursor nesw-resize

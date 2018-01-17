@@ -1,0 +1,128 @@
+.Menus {
+  width: 180px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  position: absolute;
+  background-color: #fff;
+  z-index: 11;
+}
+
+.Menus-wrapper {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.Menus-wrapper.newAsset {
+  text-align: center;
+}
+
+/*.Menus-wrapper.newAsset button:hover {
+  background-color: #da5a48;
+  border: 1px solid #da5a48;
+}
+
+.Menus-wrapper.newAsset button {
+  outline: none;
+  border: 1px solid #fff;
+  background-color: transparent;
+  width: 64px;
+  height: 64px;
+  border-radius: 3px;
+  padding: 8px 20px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 20px 0px #bf3c29;
+  transition: all .21s ease-in-out;
+}*/
+
+.Menus-wrapper.newAsset button {
+  background: url(../../../images/add_orange_red_shadow.png) no-repeat;
+  width: 64px;
+  height: 64px;
+  background-size: cover;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  /*box-shadow: 0px 0px 20px 0px #bf3c29;*/
+  /*border-radius: 100%;*/
+}
+
+.Menus-wrapper.newAsset .show {
+  display: inline-block;
+}
+
+.Menus-wrapper button, .Menus-wrapper div {
+
+}
+
+.Menus-wrapper button i {
+  color: #fff;
+  display: inline-block;
+  font-size: 22px
+}
+
+.Menus-wrapper .hide {
+  display: none;
+}
+
+.Menus-wrapper .show {
+  display: block;
+}
+
+
+/* FilterSet Menus*/
+.Menus-wrapper.FilterSet {
+  padding: 0;
+}
+
+.Menus-wrapper.FilterSet .selector {
+  text-align: left;
+  cursor: pointer;
+  user-select: none;
+  height: 100%;
+  line-height: 1.9;
+  transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+  border-radius: 3px;
+  position: relative;
+}
+
+.Menus-wrapper.FilterSet .selector:hover {
+    background-color: #e8e8e8;
+}
+
+.Menus-wrapper.FilterSet.empty .selector .label {
+  color: #b3b3b3;
+}
+
+.Menus-wrapper.FilterSet .selector .label {
+  color: #222222;
+  font-size: 13px;
+  font-weight: 400;
+  margin-left: 10px;
+  border-bottom: 1px dotted #ddd;
+}
+
+.Menus-wrapper.FilterSet .selector .label i {
+  margin-left: 12px;
+  font-size: 10px;
+  color: #777;
+}
+.Menus-wrapper.FilterSet .selector .label i:nth-child(1) {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.Menus-wrapper.FilterSet .selector .label i:nth-child(2) {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+.Menus-wrapper.FilterSet .selector .btn {
+  text-align: center;
+}

@@ -1,0 +1,74 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../../../styles/animations'
+
+
+color-main-contrast-light = #F3B562
+color-graphiti-orange = #F3B562
+color-main-contrast-light2 = #F1797A
+color-graphiti-red = #F26450
+color-gpt-red-light-1 = #ff8371
+color-gpt-red-dark-1 = #da5a48
+color-gpt-blue = #0fa2e2
+color-gpt-blue-dark-1 = #0d91ca
+color-gpt-label-blue-dark = #5692ad
+color-gpt-darkgrey = #717171
+color-gpt-purple = #615dae
+.PlotFieldSubMenu-list
+  list-style none
+  background-color rgba(242, 100, 80, 0.03)
+  border-radius rem-calc(3)
+  width rem-calc(150)
+  box-shadow 0 1px 9px 1px rgba(0,0,0,.12), 0 1px 3px 0px hsla(0,0%,88%,.25)
+  // @extend .animation-fade-in
+  li
+    width 100%
+    padding rem-calc(8)
+    padding-top 0
+  li:first-child
+    padding-top rem-calc(8)
+  &:after,
+    &:before 
+      border solid transparent 
+      content ' ' 
+      height 0 
+      pointer-events none 
+      position absolute 
+      width 0
+      top rem-calc(-20)
+      right rem-calc(16)
+      
+    &:before 
+      top rem-calc(-22)
+      border-bottom-color #e8e8e8 
+      margin-left -11px 
+      border-width 11px 
+      
+    &:after 
+      border-bottom-color #fff 
+      border-width 10px 
+      margin-left -10px 
+      
+
+.text
+  color color-graphiti-red
+  border-radius rem-calc(3)
+  border none
+  font-size rem-calc(11)
+  padding rem-calc(5)
+  font-weight 500
+  cursor pointer
+  &:hover
+    background-color rgba(242, 100, 80, 0.03)
+
+.text-active
+  @extend .text
+  background-color color-graphiti-red
+  color #fff
+  &:hover
+    background-color color-gpt-red-dark-1
+    color #fff
+
+.text-del
+  @extend .text
+  color #3c3c3c

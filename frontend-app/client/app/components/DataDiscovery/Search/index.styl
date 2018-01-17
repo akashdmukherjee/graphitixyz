@@ -1,0 +1,45 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+@import '../../../styles/settings'
+
+.search-bar
+  display flex
+  flex-direction row
+  align-items center
+  position relative
+  flex 1
+  height 100%
+  border-bottom 1px solid #ddd
+  i
+    align-self center
+  >.filter-content
+    flex 1
+    display flex
+    align-items center
+    height 100%
+    padding 0 rem-calc(10)
+  // select all but the first
+  >.filter-content ~ .filter-content
+    border-left 1px solid #ddd
+  
+  .search-btn
+    outline none
+    background-color color-graphiti-red
+    border none
+    padding rem-calc(12) rem-calc(20)
+    color #fff
+    cursor pointer
+    font-size rem-calc(14)
+    border-radius rem-calc(3)
+    margin-right rem-calc(20)
+
+.logo
+  background-image url('../../../images/graphiti.png')
+  width 64px
+  height 64px
+  background-size contain
+  background-repeat no-repeat
+  margin 0 rem-calc(10)
+
+.row
+  background-color blue

@@ -1,0 +1,72 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+text-normal-color=#fff
+text-hover-color=rgba(0,0,0,0.06)
+active-bg-color=#F3B562
+active-text-color=#413f3c
+text-header-normal-color=#444
+text-alt-normal-color=#777
+
+.teams-wrapper
+  display flex
+  flex-direction column
+  width 100%
+  margin-top rem-calc(15)
+  .header
+    display flex
+    padding rem-calc(5) rem-calc(10)
+    position relative
+    padding-top 0
+    h5
+      font-size rem-calc(13)
+      font-weight 400
+      i
+        padding 0 rem-calc(5)
+        font-size rem-calc(14)
+    >div
+      cursor pointer
+      margin-top rem-calc(1)
+      position absolute
+      top rem-calc(-1)
+      right rem-calc(10)
+      &:hover
+        color #333
+  ul
+    list-style none
+    li
+      padding rem-calc(5)
+      padding-left rem-calc(40)
+      font-weight 400
+      font-size rem-calc(12)
+      cursor pointer
+      position relative
+      transition border 0.25s linear, color 0.25s linear, background-color 0.25s linear       
+      &:hover
+        background-color text-hover-color
+        transition border 0.25s linear, color 0.25s linear, background-color 0.25s linear
+        >.edit
+          display flex
+          justify-content center
+          align-items center
+          width rem-calc(18)
+          height rem-calc(18)
+      i
+        font-size rem-calc(10)
+      .edit
+        display none
+        font-size rem-calc(12)
+        position absolute
+        top rem-calc(4)
+        right rem-calc(15)
+        &:hover
+          padding rem-calc(5)
+          border-radius 50%
+          border 1px solid #555
+    .active
+      transition border 0.25s linear, color 0.25s linear, background-color 0.25s linear      
+      background-color active-bg-color
+      color active-text-color
+      &:hover
+        background-color active-bg-color
+        color active-text-color

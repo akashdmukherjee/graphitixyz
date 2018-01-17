@@ -1,0 +1,24 @@
+.__react_component_tooltip.sql-tooltip-caret.type-dark.place-right:after {
+    border: none;
+    border-top-color: #222;
+    border-top-style: solid;
+    border-top-width: 6px;
+}
+
+.__react_component_tooltip.sql-tooltip-caret.place-right:before {
+    border-left: 10px solid transparent!important;
+    border-right: 10px solid transparent!important;
+    bottom: -8px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.__react_component_tooltip.sql-tooltip-caret.place-right:after {
+    border-left: 8px solid transparent!important;
+    border-right: 8px solid transparent!important;
+    bottom: -6px;
+    left: 12%;
+    margin-left: -8px;
+    top: 42px!important;
+}
+

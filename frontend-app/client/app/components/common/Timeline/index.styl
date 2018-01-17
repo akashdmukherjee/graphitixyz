@@ -1,0 +1,61 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+color-main-contrast-light = #F3B562
+color-graphiti-orange = #F3B562
+color-main-contrast-light2 = #F1797A
+color-graphiti-red = #F26450
+color-gpt-red-light-1 = #ff8371
+color-gpt-red-dark-1 = #da5a48
+color-gpt-blue = #0fa2e2
+color-gpt-blue-dark-1 = #0d91ca
+color-gpt-label-blue-dark = #5692ad
+color-gpt-darkgrey = #717171
+color-gpt-purple = #615dae
+
+
+checkpointSize=30
+timelineHeight=6
+inactive-bg-color=#eee
+active-bg-color=color-graphiti-orange
+.Timeline
+  position relative
+  height rem-calc(timelineHeight)
+  border-radius rem-calc(25)
+  background-color inactive-bg-color
+
+.Timeline-bg
+  position absolute
+  height rem-calc(timelineHeight)
+  background-color active-bg-color
+  top 0
+  transition all 0.25s ease-in-out
+
+.checkPoint
+  position absolute
+  width rem-calc(checkpointSize)
+  height rem-calc(checkpointSize)
+  border-radius rem-calc(100)
+  background-color inactive-bg-color
+  top -11px
+  transition all 0.25s ease-in-out
+  display flex
+  align-items center
+  justify-content center
+  color #b3b3b3
+  &.active
+    background-color active-bg-color
+    transition all 0.25s ease-in-out
+    color #fff
+
+.content
+  position relative
+  left -50%
+.text
+  position absolute
+  font-size rem-calc(12)
+  font-weight 400
+  color #444
+  top rem-calc(20)
+  overflow hidden
+  white-space nowrap

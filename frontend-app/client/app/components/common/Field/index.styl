@@ -1,0 +1,71 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+color-graphiti-red=#f26450
+field-label-color=#5d5d5d
+.icon
+  color rgb(249, 201, 201)
+  font-size rem-calc(10)
+
+.field
+  background rgba(242, 100, 80, 0.03)
+  margin 8px
+  border-radius 3px
+  border 1px solid rgb(249, 201, 201)
+  color #f26450
+  display flex
+  justify-content space-between
+  align-items center
+  font-size rem-calc(12)
+  text-decoration none
+  cursor move
+  opacity 0.75
+  transition border 0.25s linear, color 0.25s linear, background-color 0.1s ease-in-out
+  box-shadow rgba(0,0,0,0.1) 0px 1px 2px
+  &.active
+    opacity 1
+  &:hover
+    opacity 1
+
+.content
+  padding rem-calc(3)
+  text-overflow ellipsis
+  white-space nowrap
+  overflow hidden
+  padding-right rem-calc(8)
+  &.no-dropdown
+    padding rem-calc(6)
+
+.dropdown-label
+  font-size rem-calc(9)
+  padding rem-calc(8)
+  border-left 1px solid rgb(249, 201, 201)
+  cursor pointer
+  width rem-calc(51)
+  position relative
+  i
+    font-size rem-calc(7)
+    margin-left rem-calc(3)
+    position absolute
+    top rem-calc(10)
+  &:hover
+    background-color rgba(242, 98, 80, 0.1)
+  &.left
+    margin 0
+  &.right
+    margin 0
+
+.left-icon
+  @extend .icon
+  margin 0 rem-calc(5)
+
+.right-icon
+  @extend .icon
+  right 5px
+  top 33%
+  position absolute
+
+.right-icon-text
+  @extend .right-icon
+  font-size rem-calc(14)
+  top 15%

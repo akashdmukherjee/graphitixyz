@@ -1,0 +1,117 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+@import '../../styles/settings'
+
+.timeline-container
+  position relative
+  grid()
+  .timeline-menu-column
+    cell(1, 2, g:0)
+    padding-left rem-calc(15)
+    padding-right rem-calc(15)
+    &.text-right
+      text-align right
+
+.timeline-button
+  color color-main-dark
+
+.timeline-item
+  width: rem-calc(100) //just for now
+  position absolute
+  cursor move
+  display block
+  margin-top rem-calc(7)
+  left 0
+  background-color color-main-contrast-light
+  height: rem-calc(25)
+  z-index 2
+  font-size rem-calc(12)
+  padding rem-calc(2.5) rem-calc(5)
+  color color-main-light
+
+.timeline-item-separator
+  position absolute
+  height rem-calc(1)
+  width 100%
+  background-color color-main-dark
+  z-index 2
+
+.timeline-item-box-name
+  background-color transparent
+  z-index 3
+  font-size rem-calc(14)
+  padding rem-calc(5)
+  margin-top rem-calc(10)
+
+.timeline-scale-container
+  width 100%
+  background-color transparent
+  z-index 1
+  height rem-calc(30)
+  background-color color-main-light
+  box-shadow 0 5px 20px -6px rgba(0,0,0,.14)
+
+.scale-item
+  width 0
+  height 100%
+  border-left rem-calc(1) dashed transparent
+  float left
+  position relative
+
+.time-indicator
+  width: 0
+  position absolute
+  left 0
+  top 0
+  height 100%
+  border-left rem-calc(1) solid color-main-dark
+  z-index 4
+  transition-property left
+  transition-timing-function linear
+
+.timeline-record-play
+  float left
+
+.scale-item-number
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+  width rem-calc(30)
+  font-size rem-calc(14)
+  text-align center
+
+.dnd-handler
+  height rem-calc(5)
+  background-color darken(color-main-light, 5%)
+  width 100%
+  position relative
+  cursor row-resize
+  &::after
+    content '...'
+    position absolute
+    width rem-calc(30)
+    height rem-calc(20)
+    top rem-calc(-10.7)
+    left 50%
+    transform translateX(-50%)
+
+.play-button,
+.record-button,
+.stop-button
+  background transparent
+  padding rem-calc(5)
+  font-size rem-calc(18)
+  cursor pointer
+  border none
+  outline none
+  color color-main-contrast
+
+.timeline-box-wrapper
+  width 100%
+  height 50px
+  margin-top 20px
+  background-color color-main-light
+  position relative
+  box-shadow 0 5px 20px -6px rgba(0,0,0,.14)

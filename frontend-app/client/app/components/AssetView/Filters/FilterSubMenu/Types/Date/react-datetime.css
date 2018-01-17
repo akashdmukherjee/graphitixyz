@@ -1,0 +1,97 @@
+.rdtPicker {
+  width: 325px;
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #484848;
+  padding: 10px 25px;
+  border-radius: 3px;
+  border: 1px solid #e4e7e7;
+}
+
+.rdtPicker table {
+  box-sizing: border-box;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+.rdtPicker .rdtDays {
+  border-collapse: collapse;
+}
+
+.rdtPicker .rdtDay{
+  border: 1px solid #e4e7e7;
+  padding: 0;
+  color: #565a5c;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 39px;
+  height: 38px;
+}
+
+.rdtPicker .dow {
+  font-size: 13px;
+  color: #757575;
+  font-weight: 300;
+}
+
+.rdtPicker thead tr:first-child th {
+  font-weight: 500;
+  font-size: 15px;
+  color: #3c3f40;
+}
+.rdtNext span, .rdtPrev span {
+  font-size: 20px;
+}
+
+.rdtPicker td.rdtActive, .rdtPicker td.rdtActive:hover {
+  background-color: #f26450;
+}
+
+.rdt input {
+  outline: none;
+  padding: 8px 5px;
+  font-size: 14px;
+  color: #484848;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  width: 100%;
+  transition: opacity .21s ease-in-out;
+}
+
+.rdt.active input {
+  background-color: #f26450;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.rdt.endDate input {
+  margin-left: 10px;
+}
+
+.rdt input:focus {
+  transition: opacity .21s ease-in;
+  border: 1px solid #cbcbcb;
+}
+
+/*.rdtTime {
+  height: 334px;
+}
+
+.rdtTime table {
+  position: relative;
+  height: 100%;
+}
+
+.rdtTime .rdtCounter .rdtBtn,
+.rdtTime .rdtCounter .rdtCount {
+  height: 70%;
+}*/
+
+.rdtTime .rdtCounters {
+  width: 100%;
+}
+
+.rdtTime .rdtCounter {
+  width: 32%;
+}

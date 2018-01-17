@@ -1,0 +1,38 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+@import '../../styles/settings'
+
+.static-footer-bar
+  z-index 9999
+  height rem-calc(40)
+  line-height rem-calc(40)
+  background-color color-main-light
+  box-shadow 0px -4px 10px -2px rgba(0,0,0,0.1)
+  color color-main-light
+  position absolute
+  left 0
+  bottom 0
+  width 100%
+  padding-left rem-calc(15)
+  padding-right rem-calc(15)
+  grid()
+  .menu-column
+    cell(1, 2, g:0)
+    &.text-center
+      text-align center
+    &.text-right
+      text-align right
+  .footer-bar-button
+    background-color color-graphiti-red
+    outline none
+    border none
+    padding rem-calc(5) rem-calc(15)
+    color white
+    border-radius 2px
+    text-align center
+    text-decoration none
+    display inline-block
+    font-size 14px
+    margin 4px 2px
+    cursor pointer

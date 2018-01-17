@@ -1,0 +1,63 @@
+.monaco-editor .suggest-widget.visible {
+  background-color: #fff!important;
+  border: 1px solid #eee!important;
+}
+
+.monaco-list-row.focused {
+  background-color: #f26450!important;
+  color: #fff!important;
+}
+
+.monaco-list-row.focused .monaco-highlighted-label {
+  font-weight: 200!important;
+}
+
+.monaco-highlighted-label {
+  font-weight: 300!important;
+}
+
+.monaco-list-row.focused .highlight,
+.highlight {
+  font-weight: bold!important;
+}
+
+.monaco-highlighted-label {
+  color: #666!important
+}
+
+.highlight {
+  color: #444!important
+}
+
+.monaco-list-row.focused .monaco-highlighted-label {
+  color: #fce2de!important;
+}
+.monaco-list-row.focused .highlight {
+  color: #fff!important
+}
+
+.monaco-editor-hover {
+  background-color: #fff!important;
+}
+
+.sql-snippet {
+  color: #0d91ca!important;
+}
+
+.sql-snippet:hover {
+  text-decoration: underline;
+  color: #0d91ca!important;
+  font-weight: 400!important;
+  cursor: pointer;
+}
+
+.monaco-editor-hover-content .hover-row div p {
+  color: #f26450!important;
+  font-size: 11px;
+}
+
+.monaco-editor-hover-content .hover-row div p strong {
+  color: #333!important;
+  font-weight: 400!important;
+  font-size: 15px;
+}

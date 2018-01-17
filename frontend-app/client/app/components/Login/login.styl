@@ -1,0 +1,43 @@
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+@import '../../styles/custom'
+@import '../../styles/settings'
+
+body
+  overflow hidden
+  font-family font-roboto
+
+.main-container
+  height: 100%
+  margin 0 auto
+  padding 0
+  display flex
+  flex-direction row
+
+.login-container
+  flex 1
+  height 100vh
+  display flex
+  align-items center
+  justify-content center
+
+.image-container
+  flex 1
+  height 100vh
+  float left
+  background-size contain
+  &::after
+    clear both
+
+.image-bg-1
+  @extend .image-container
+  background-image url('../../images/login_bg_1.jpg')
+
+.image-bg-2
+  @extend .image-container
+  background-image url('../../images/login_bg_2.jpg')
+
+.image-bg-3
+  @extend .image-container
+  background-image url('../../images/login_bg_3.jpg')

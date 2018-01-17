@@ -1,0 +1,45 @@
+
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+@import '../../styles/settings'
+
+body
+  overflow hidden
+  font-family font-roboto
+
+.main-container
+  height 100%
+  margin 0 auto
+  padding 0
+
+.canvas-timeline-container
+  min-height 100vh
+  height auto
+  float left
+  position relative
+  &::after,
+  &::before
+    display table
+    content ''
+  &::after
+    clear both
+
+.main-menu
+  border rem-calc(1) solid color-main-contrast
+  margin-bottom rem-calc(5)
+
+.exit-full-screen-button
+  position absolute
+  right rem-calc(10)
+  top rem-calc(6)
+  z-index 999999
+
+.slide-switcher
+  position absolute
+  right rem-calc(120)
+  top rem-calc(6)
+  z-index 999999
+  input
+    width rem-calc(30)
+    text-align center
